@@ -1,276 +1,339 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:alwaysDrawnWithCache="false"
+    android:animateLayoutChanges="true"
     android:background="@drawable/background_b"
+    android:fadeScrollbars="true"
     android:orientation="vertical"
     android:outlineProvider="background"
+    android:persistentDrawingCache="scrolling"
     android:scrollbarAlwaysDrawVerticalTrack="true"
+    android:scrollbars="horizontal"
     android:visibility="visible"
+    app:layout_scrollFlags="scroll"
     tools:context=".RegisterActivity"
     tools:visibility="visible">
 
-    <EditText
-        android:id="@+id/password2"
-        style="@style/Widget.AppCompat.EditText"
-        android:layout_width="283dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="688dp"
-        android:layout_marginEnd="32dp"
-        android:background="#FFFFFF"
-        android:backgroundTint="@color/white"
-        android:ems="10"
-        android:inputType="text|textPassword|textNoSuggestions"
-        android:shadowColor="#1F1F1F"
-        android:shadowDx="2"
-        android:shadowDy="30"
-        android:shadowRadius="30"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.131"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/labelPassword2"
-        android:layout_width="279dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="44dp"
-        android:text="CONFIRMAR SENHA:"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/password2"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/password"
-        style="@style/Widget.AppCompat.EditText"
-        android:layout_width="283dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="608dp"
-        android:layout_marginEnd="32dp"
-        android:background="#FFFFFF"
-        android:backgroundTint="@color/white"
-        android:ems="10"
-        android:inputType="text|textPassword|textNoSuggestions"
-        android:shadowColor="#1F1F1F"
-        android:shadowDx="2"
-        android:shadowDy="30"
-        android:shadowRadius="30"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.131"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/labelPassword"
-        android:layout_width="79dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginBottom="4dp"
-        android:text="SENHA:"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/password"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/login"
-        style="@style/Widget.AppCompat.EditText"
-        android:layout_width="283dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="196dp"
-        android:layout_marginEnd="32dp"
-        android:background="#FFFFFF"
-        android:backgroundTint="@color/white"
-        android:ems="10"
-        android:inputType="text"
-        android:shadowColor="#1F1F1F"
-        android:shadowDx="2"
-        android:shadowDy="30"
-        android:shadowRadius="30"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.213"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/buttonConfirm"
-        android:layout_width="115dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="744dp"
-        android:layout_marginEnd="148dp"
-        android:backgroundTint="#1AC738"
-        android:text="Entrar"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/labelLogin"
-        android:layout_width="79dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginBottom="4dp"
-        android:text="LOGIN:"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/login"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/labelSex"
-        android:layout_width="79dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="48dp"
-        android:text="SEXO:"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/inputSex"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/labelBirth"
-        android:layout_width="148dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="184dp"
-        android:layout_marginBottom="4dp"
-        android:text="Data de nascimento:"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextDate"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ToggleButton
-        android:id="@+id/inputSex"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="280dp"
-        android:layout_marginEnd="260dp"
-        android:textOff="Masculino"
-        android:textOn="Feminino"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextDate"
-        android:layout_width="144dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="280dp"
-        android:layout_marginEnd="84dp"
-        android:background="#FFFFFF"
-        android:backgroundTint="#FFFFFF"
-        android:ems="10"
-        android:inputType="date"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:layout_width="269dp"
-        android:layout_height="205dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="356dp"
-        android:layout_marginEnd="7dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    <LinearLayout
+        android:id="@+id/form"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="123dp"
+        android:background="#5E000000"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:persistentDrawingCache="scrolling"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.chip.ChipGroup
-            android:layout_width="43dp"
-            android:layout_height="match_parent"
-            app:chipSpacingHorizontal="1dp"
-            app:chipSpacingVertical="1dp">
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chip3"
-                android:layout_width="40dp"
-                android:layout_height="40dp" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chip4"
-                android:layout_width="40dp"
-                android:layout_height="40dp" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chip5"
-                android:layout_width="40dp"
-                android:layout_height="40dp" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chip6"
-                android:layout_width="40dp"
-                android:layout_height="40dp" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chip7"
-                android:layout_width="40dp"
-                android:layout_height="40dp" />
-
-        </com.google.android.material.chip.ChipGroup>
-
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:id="@+id/linearLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/labelOption"
-                android:layout_width="match_parent"
-                android:layout_height="43dp"
-                android:text="Educação Infantil"
+                android:id="@+id/labelLogin"
+                android:layout_width="79dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginBottom="0dp"
+                android:text="LOGIN:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+                android:textSize="18dp" />
 
-            <TextView
-                android:id="@+id/labelOption1"
-                android:layout_width="match_parent"
-                android:layout_height="43dp"
-                android:text="Fundamental Inicial"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
+            <EditText
+                android:id="@+id/login"
+                style="@style/Widget.AppCompat.EditText"
+                android:layout_width="283dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:background="#FFFFFF"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:inputType="text"
+                android:shadowColor="#1F1F1F"
+                android:shadowDx="2"
+                android:shadowDy="30"
+                android:shadowRadius="30"
+                android:textAlignment="center" />
 
-            <TextView
-                android:id="@+id/labelOption2"
-                android:layout_width="match_parent"
-                android:layout_height="43dp"
-                android:text="Fundamental Final"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/labelOption3"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:text="Ensino Médio"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/labelOption4"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:text="Ensino Superior"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp" />
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/BirthXSex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/linearSex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/labelSex"
+                    android:layout_width="79dp"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="0dp"
+                    android:text="SEXO:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18dp" />
+
+                <ToggleButton
+                    android:id="@+id/inputSex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:textOff="Masculino"
+                    android:textOn="Feminino" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearBirth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/labelBirth"
+                    android:layout_width="148dp"
+                    android:layout_height="31dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginBottom="0dp"
+                    android:text="Data de nascimento:"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <DatePicker
+                    android:layout_width="wrap_content"
+                    android:layout_height="83dp"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner"
+                    android:headerBackground="#fff" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/choices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="7dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroups"
+                android:layout_width="43dp"
+                android:layout_height="match_parent"
+                app:chipSpacingHorizontal="1dp"
+                app:chipSpacingVertical="1dp">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/checkI"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:checkable="true"
+                    app:checkedIconEnabled="true"
+                    app:checkedIconTint="#14D02C"
+                    app:closeIconVisible="false" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/checkFI"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:checkable="true"
+                    app:checkedIconEnabled="true"
+                    app:checkedIconTint="#14D02C" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/checkFF"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:checkable="true"
+                    app:checkedIconEnabled="true"
+                    app:checkedIconTint="#14D02C" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/checkM"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:checkable="true"
+                    app:checkedIconEnabled="true"
+                    app:checkedIconTint="#14D02C" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/checkS"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:checkable="true"
+                    app:checkedIconEnabled="true"
+                    app:checkedIconTint="#14D02C" />
+
+            </com.google.android.material.chip.ChipGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/labelOption"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:text="Educação Infantil"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/labelOption1"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:text="Fundamental Inicial"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/labelOption2"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:text="Fundamental Final"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/labelOption3"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Ensino Médio"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/labelOption4"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Ensino Superior"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/labelPassword"
+                android:layout_width="79dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginBottom="0dp"
+                android:text="SENHA:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/password"
+                style="@style/Widget.AppCompat.EditText"
+                android:layout_width="283dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:background="#FFFFFF"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:inputType="text|textPassword|textNoSuggestions"
+                android:shadowColor="#1F1F1F"
+                android:shadowDx="2"
+                android:shadowDy="30"
+                android:shadowRadius="30"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearConfirmPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/labelPassword2"
+                android:layout_width="279dp"
+                android:layout_height="29dp"
+                android:layout_marginStart="0dp"
+                android:text="CONFIRMAR SENHA:"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp" />
+
+            <EditText
+                android:id="@+id/password2"
+                style="@style/Widget.AppCompat.EditText"
+                android:layout_width="283dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:background="#FFFFFF"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:inputType="text|textPassword|textNoSuggestions"
+                android:shadowColor="#1F1F1F"
+                android:shadowDx="2"
+                android:shadowDy="30"
+                android:shadowRadius="30"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonConfirm"
+            android:layout_width="115dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:backgroundTint="#1AC738"
+            android:text="Entrar"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
 
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
