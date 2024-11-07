@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdge="horizontal"
+    android:scrollbars="horizontal">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/quests_medio"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:scrollIndicators="bottom|right"
+                android:scrollbarAlwaysDrawHorizontalTrack="true"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbarStyle="insideOverlay"
+                android:scrollbars="horizontal|vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="406dp"
+                        android:layout_height="wrap_content"
+                        android:autoText="true"
+                        android:background="@android:color/holo_green_light"
+                        android:backgroundTint="@android:color/holo_green_light"
+                        android:text="Questão Nª"
+                        android:textAlignment="viewEnd"
+                        android:textColor="#3E3E3E"
+                        android:textDirection="firstStrongLtr"
+                        android:textSize="34sp"
+                        android:textStyle="bold"
+                        android:typeface="serif"
+                        android:verticalScrollbarPosition="defaultPosition" />
+
+                    <TextView
+                        android:id="@+id/nQuest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#FFFFFF"
+                        android:backgroundTint="@android:color/holo_green_light"
+                        android:text="15"
+                        android:textColor="#3E3E3E"
+                        android:textSize="34sp"
+                        android:textStyle="bold"
+                        android:typeface="serif" />
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/holo_green_light"
+                    android:indeterminateBehavior="cycle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="246dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/questText"
+                        android:layout_width="386dp"
+                        android:layout_height="match_parent"
+                        android:autoText="true"
+                        android:fontFamily="serif"
+                        android:maxLines="10"
+                        android:text="Questão xyz"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        app:autoSizeTextType="uniform" />
+
+                    <ImageView
+                        android:id="@+id/questImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/questao3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/optionsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/material_dynamic_primary60"
+                    android:orientation="horizontal"
+                    android:textAlignment="center">
+
+                    <LinearLayout
+                        android:layout_width="387dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:keepScreenOn="false"
+                        android:longClickable="false"
+                        android:measureWithLargestChild="false"
+                        android:orientation="vertical"
+                        android:textAlignment="textStart">
+
+                        <Button
+                            android:id="@+id/optionResponseA"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#A86219"
+                            android:backgroundTintMode="add"
+                            android:text="A) resposta1" />
+
+                        <Button
+                            android:id="@+id/optionResponseC"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#A86219"
+                            android:backgroundTintMode="add"
+                            android:text="C) resposta3" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/optionResponseB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#A86219"
+                            android:backgroundTintMode="add"
+                            android:text="B) resposta2" />
+
+                        <Button
+                            android:id="@+id/optionResponseD"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="#A86219"
+                            android:backgroundTintMode="add"
+                            android:text="D) resposta4" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</ScrollView>
