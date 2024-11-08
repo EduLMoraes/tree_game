@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Code"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/background_c">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/help"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:accessibilityLiveRegion="assertive"
+            android:fontFamily="sans-serif-medium"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="#FFFCFC"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="Insira o código"
+            android:textAlignment="gravity"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/up3"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:icon="@android:drawable/arrow_up_float"
+                    app:iconGravity="textEnd"
+                    app:iconPadding="3dp"
+                    app:iconSize="25dp"
+                    app:iconTint="#FFFFFF" />
+
+                <ImageView
+                    android:id="@+id/i3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/questao6" />
+
+                <Button
+                    android:id="@+id/down3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@android:color/transparent"
+                    app:icon="@android:drawable/arrow_down_float"
+                    app:iconGravity="textEnd"
+                    app:iconPadding="3dp"
+                    app:iconSize="25dp"
+                    app:iconTint="#F0F0F0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <Button
+                    android:id="@+id/up2"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:icon="@android:drawable/arrow_up_float"
+                    app:iconGravity="textEnd"
+                    app:iconPadding="3dp"
+                    app:iconSize="25dp"
+                    app:iconTint="#FFFFFF" />
+
+                <ImageView
+                    android:id="@+id/i2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/questao6" />
+
+                <Button
+                    android:id="@+id/down2"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:backgroundTintMode="add"
+                    app:icon="@android:drawable/arrow_down_float"
+                    app:iconGravity="textEnd"
+                    app:iconPadding="3dp"
+                    app:iconSize="25dp"
+                    app:iconTint="#F0F0F0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/up1"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    app:icon="@android:drawable/arrow_up_float"
+                    app:iconGravity="textEnd"
+                    app:iconPadding="3dp"
+                    app:iconSize="25dp"
+                    app:iconTint="#FFFFFF" />
+
+                <ImageView
+                    android:id="@+id/i1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/questao6" />
+
+                <Button
+                    android:id="@+id/down1"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:backgroundTintMode="add"
+                    app:icon="@android:drawable/arrow_down_float"
+                    app:iconGravity="textEnd"
+                    app:iconPadding="3dp"
+                    app:iconSize="25dp"
+                    app:iconTint="#F0F0F0" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
