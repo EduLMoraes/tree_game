@@ -17,91 +17,44 @@ public class CodeActivity extends AppCompatActivity {
         setContentView(R.layout.code_insert);
 
         Drawable[] simbols = {
-                getDrawable(R.drawable.questao3),
-                getDrawable(R.drawable.questao2),
-                getDrawable(R.drawable.questao1)
+                getDrawable(R.drawable.circulo),
+                getDrawable(R.drawable.cruz),
+                getDrawable(R.drawable.quadrado),
+                getDrawable(R.drawable.triangulo),
+                getDrawable(R.drawable.estrela)
         };
 
-//        PRIMEIRO CÓDIGO
-        ImageView code1 = findViewById(R.id.i1);
-        code1.setBackground(simbols[0]);
+        switchSimbol(findViewById(R.id.up1), findViewById(R.id.down1), findViewById(R.id.i1), simbols);
+        switchSimbol(findViewById(R.id.up2), findViewById(R.id.down2), findViewById(R.id.i2), simbols);
+        switchSimbol(findViewById(R.id.up3), findViewById(R.id.down3), findViewById(R.id.i3), simbols);
+    }
 
-        Button up1 = findViewById(R.id.up1);
-        Button down1 = findViewById(R.id.down1);
-
-        up1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    ImageView code1 = findViewById(R.id.i1);
-
-                     for (int i = 0; i< simbols.length; i++) {
-                         if(code1.getBackground() == simbols[i]){
-                             try {
-                                 code1.setBackground(simbols[i+1]);
-                             }catch (ArrayIndexOutOfBoundsException err){
-                                 code1.setBackground(simbols[0]);
-                             }
-                             break;
-                         }
-                     }
-                 }
-             });
-
-        down1.setOnClickListener(new View.OnClickListener() {
-               @Override
-               public void onClick(View view) {
-                   ImageView code1 = findViewById(R.id.i1);
-
-                   for (int i = simbols.length - 1; i >= 0; i--) {
-                       if(code1.getBackground() == simbols[i]){
-                           try {
-                               code1.setBackground(simbols[i-1]);
-                           }catch (ArrayIndexOutOfBoundsException err){
-                               code1.setBackground(simbols[simbols.length - 1]);
-                           }
-                           break;
-                       }
-                   }
-               }
-           });
-
-
-        //      SEGUNDO CÓDIGO
-        ImageView code2 = findViewById(R.id.i2);
-        code2.setBackground(simbols[0]);
-
-        Button up2 = findViewById(R.id.up2);
-        Button down2 = findViewById(R.id.down2);
-
-        up2.setOnClickListener(new View.OnClickListener() {
+    private void switchSimbol(Button up, Button down, ImageView simbol, Drawable[] simbols){
+        simbol.setBackground(simbols[0]);
+        up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ImageView code2 = findViewById(R.id.i2);
-
                 for (int i = 0; i< simbols.length; i++) {
-                    if(code2.getBackground() == simbols[i]){
+                    if(simbol.getBackground() == simbols[i]){
                         try {
-                            code2.setBackground(simbols[i+1]);
+                            simbol.setBackground(simbols[i+1]);
                         }catch (ArrayIndexOutOfBoundsException err){
-                            code2.setBackground(simbols[0]);
+                            simbol.setBackground(simbols[0]);
                         }
                         break;
                     }
                 }
             }
         });
-
-        down2.setOnClickListener(new View.OnClickListener() {
+        down.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ImageView code2 = findViewById(R.id.i2);
-
                 for (int i = simbols.length - 1; i >= 0; i--) {
-                    if(code2.getBackground() == simbols[i]){
+                    if(simbol.getBackground() == simbols[i]){
                         try {
-                            code2.setBackground(simbols[i-1]);
+                            simbol.setBackground(simbols[i-1]);
                         }catch (ArrayIndexOutOfBoundsException err){
-                            code2.setBackground(simbols[simbols.length - 1]);
+                            simbol.setBackground(simbols[simbols.length - 1]);
                         }
                         break;
                     }
@@ -109,47 +62,5 @@ public class CodeActivity extends AppCompatActivity {
             }
         });
 
-//        TERCEIRO CÓDIGO
-        ImageView code3 = findViewById(R.id.i3);
-        code3.setBackground(simbols[0]);
-
-        Button up3 = findViewById(R.id.up3);
-        Button down3 = findViewById(R.id.down3);
-
-        up3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ImageView code3 = findViewById(R.id.i3);
-
-                for (int i = 0; i< simbols.length; i++) {
-                    if(code3.getBackground() == simbols[i]){
-                        try {
-                            code3.setBackground(simbols[i+1]);
-                        }catch (ArrayIndexOutOfBoundsException err){
-                            code3.setBackground(simbols[0]);
-                        }
-                        break;
-                    }
-                }
-            }
-        });
-
-        down3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ImageView code3 = findViewById(R.id.i3);
-
-                for (int i = simbols.length - 1; i >= 0; i--) {
-                    if(code3.getBackground() == simbols[i]){
-                        try {
-                            code3.setBackground(simbols[i-1]);
-                        }catch (ArrayIndexOutOfBoundsException err){
-                            code3.setBackground(simbols[simbols.length - 1]);
-                        }
-                        break;
-                    }
-                }
-            }
-        });
     }
 }

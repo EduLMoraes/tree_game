@@ -1,5 +1,6 @@
 package com.example.apptreegame;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -22,6 +23,11 @@ public class QuestActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.quests_medio);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.quests_medio), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
 
         TextView quest;
         quest = findViewById(R.id.nQuest);
@@ -45,7 +51,10 @@ public class QuestActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         LinearLayout backgroundOptions = findViewById(R.id.optionsLayout);
+                        boolean isCorrect = false;
+
                         for(int j = 0; j<options.length; j++){
+                            options[j].setEnabled(false);
                             if (options[j].isPressed() && options[j].getText().charAt(0) != response){
                                 options[j].setBackgroundColor(Color.rgb(255, 0, 0));
                                 backgroundOptions.setBackgroundColor(Color.rgb(255, 0, 0));
@@ -54,10 +63,15 @@ public class QuestActivity extends AppCompatActivity {
                             }else if(options[j].isPressed() && options[j].getText().charAt(0) == response){
                                 options[j].setBackgroundColor(Color.rgb(0, 255, 0));
                                 backgroundOptions.setBackgroundColor(Color.rgb(0, 255, 0));
+                                isCorrect = true;
                             }else{
                                 options[j].setVisibility(View.INVISIBLE);
                                 options[j].setEnabled(false);
                             }
+                        }
+                        if (isCorrect){
+                            Intent intent = new Intent(QuestActivity.this, CodeActivity.class);
+                            startActivity(intent);
                         }
                     }
                 }
@@ -69,11 +83,7 @@ public class QuestActivity extends AppCompatActivity {
         optionC.setText("C) "+"População");
         optionD.setText("D) "+"Sociedade");
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.quests_medio), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
     }
 }
 
