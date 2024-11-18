@@ -37,7 +37,7 @@ public class QuestActivity extends AppCompatActivity {
         quest.setText("Os seres vivos podem desempenhar diferentes papéis nos ambientes onde vivem. Os animais que se alimentam de plantas são chamados de herbívoros e os carnívoros usam os herbívoros como alimento. Dois animais de espécies diferentes que se alimentam da mesma planta possuem o(a) mesmo(a): ");
 
         ImageView image = findViewById(R.id.questImage);
-        image.setBackground(getDrawable(R.drawable.questao3));
+        image.setBackground(getDrawable(R.drawable.finais_questao3));
 
         Button optionA = findViewById(R.id.optionResponseA);
         Button optionB = findViewById(R.id.optionResponseB);

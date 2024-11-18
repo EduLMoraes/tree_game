@@ -17,11 +17,11 @@ public class CodeActivity extends AppCompatActivity {
         setContentView(R.layout.code_insert);
 
         Drawable[] simbols = {
-                getDrawable(R.drawable.circulo),
-                getDrawable(R.drawable.cruz),
-                getDrawable(R.drawable.quadrado),
-                getDrawable(R.drawable.triangulo),
-                getDrawable(R.drawable.estrela)
+                getDrawable(R.drawable.code_circulo),
+                getDrawable(R.drawable.code_cruz),
+                getDrawable(R.drawable.code_quadrado),
+                getDrawable(R.drawable.code_triangulo),
+                getDrawable(R.drawable.code_estrela)
         };
 
         switchSimbol(findViewById(R.id.up1), findViewById(R.id.down1), findViewById(R.id.i1), simbols);

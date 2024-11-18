@@ -11,7 +11,7 @@
     android:layout_height="match_parent"
     android:alwaysDrawnWithCache="false"
     android:animateLayoutChanges="true"
-    android:background="@drawable/background_b"
+    android:background="@drawable/background_register"
     android:fadeScrollbars="true"
     android:orientation="vertical"
     android:outlineProvider="background"
