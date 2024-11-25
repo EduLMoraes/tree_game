@@ -11,9 +11,9 @@ import java.util.Random;
 public class QuestPuzzles extends AppCompatActivity {
 
     private float dX, dY;
-    private boolean top;
-    private boolean mid;
-    private boolean bottom;
+    private boolean top, mid, mlt, mlb, mrt, mrb, bottom = false;
+    // mrb = mid right bottom
+    // mlb = mid left bottom
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -32,183 +32,438 @@ public class QuestPuzzles extends AppCompatActivity {
 
         Random rand = new Random();
         for (ImageView peace: peaces) {
-            peace.setX(rand.nextFloat() * 200f);
-            peace.setY(rand.nextFloat() * 200f);
+            peace.setX(rand.nextInt(350));
+            peace.setY(rand.nextInt(400));
         }
 
-        top = false;
-        mid = false;
-        bottom = false;
+        peaces[3].setScaleX(peaces[2].getScaleX() + 0.2f);
+        peaces[3].setScaleY(peaces[2].getScaleY() + 0.2f);
 
         for (int i = 0; i < peaces.length; i++) {
             int j = i;
             peaces[i].setOnTouchListener((view, event) -> {
-                if(!top && "peace1".equals((String) peaces[j].getTag())){
+                if(!top){
                     if(
-                            ((int) peaces[0].getY() - peaces[1].getY()  >= 20 && (int) peaces[0].getY() - peaces[1].getY() <= 30)
+                            ((int) Math.abs(peaces[0].getY() - peaces[1].getY())  >= 20 && (int) Math.abs(peaces[0].getY() - peaces[1].getY()) <= 30)
                             &&
-                            ((int) peaces[1].getX() - peaces[0].getX()  >= 130 && (int) peaces[1].getX() - peaces[0].getX() <= 136)
+                            ((int) Math.abs(peaces[1].getX() - peaces[0].getX())  >= 130 && (int) Math.abs(peaces[1].getX() - peaces[0].getX()) <= 136)
                     ){
                         top = true;
-                    }
-                    if( (int) peaces[0].getX() == (int) peaces[2].getX() ){
-                        System.out.println("Metade esquerda feita");
-                    }
-                }else if(!top && "peace2".equals((String) peaces[j].getTag())){
-                    if(
-                            ((int) peaces[0].getY() - peaces[1].getY()  >= 20 && (int) peaces[0].getY() - peaces[1].getY() <= 30)
-                                    &&
-                                    ((int) peaces[1].getX() - peaces[0].getX()  >= 130 && (int) peaces[1].getX() - peaces[0].getX() <= 136)
-                    ){
-                        top = true;
-                    }
-                    if( (int) peaces[0].getX() == (int) peaces[2].getX() ){
-                        System.out.println("Metade esquerda feita");
                     }
                 }
-                if(!mid && "peace3".equals((String) peaces[j].getTag())){
+                if(!mid){
                     if(
-                            ((int) peaces[3].getY() - peaces[2].getY()  >= 0 && (int) peaces[2].getY() - peaces[3].getY() <= 5)
+                            ((int) Math.abs(peaces[3].getY() - peaces[2].getY())  >= 0 && (int) Math.abs(peaces[2].getY() - peaces[3].getY()) <= 5)
                                     &&
-                                    ((int) peaces[3].getX() - peaces[2].getX()  >= 116 && (int) peaces[3].getX() - peaces[2].getX() <= 126)
+                                    ((int) Math.abs(peaces[3].getX() - peaces[2].getX())  >= 116 && (int) Math.abs(peaces[3].getX() - peaces[2].getX()) <= 126)
                     ){
                         mid = true;
                     }
-                    if( (int) peaces[0].getX() == (int) peaces[2].getX() ){
-                        System.out.println("Metade esquerda feita");
-                    }
-                }else if(!mid && "peace4".equals((String) peaces[j].getTag())){
-                    System.out.println("pX " + ((int) peaces[1].getX() - peaces[0].getX()));
-                    System.out.println("p1Y: " + peaces[0].getY() % 6 + " p2Y: " + peaces[1].getY() % 6);
-                    if(
-                            ((int) peaces[0].getY() - peaces[1].getY()  >= 20 && (int) peaces[0].getY() - peaces[1].getY() <= 30)
-                                    &&
-                                    ((int) peaces[1].getX() - peaces[0].getX()  >= 130 && (int) peaces[1].getX() - peaces[0].getX() <= 136)
-                    ){
-                        top = true;
-                    }
-                    if( (int) peaces[0].getX() == (int) peaces[2].getX() ){
-                        System.out.println("Metade esquerda feita");
-                    }
                 }
-                if(!bottom && "peace5".equals((String) peaces[j].getTag())){
-                    System.out.print("pX " + ((int) peaces[4].getX() - peaces[5].getX()));
-                    System.out.println(" pY " + ((int) peaces[4].getY() - peaces[5].getY()));
+                if(!bottom){
                     if(
-                            ((int) peaces[5].getY() - peaces[4].getY()  >= 20 && (int) peaces[5].getY() - peaces[4].getY() <= 26)
+                            ((int) Math.abs(peaces[5].getY() - peaces[4].getY())  >= 20 && (int) Math.abs(peaces[5].getY() - peaces[4].getY()) <= 26)
                                     &&
-                                    ((int) peaces[5].getX() - peaces[4].getX()  >= 120 && (int) peaces[5].getX() - peaces[4].getX() <= 136)
+                                    ((int) Math.abs(peaces[5].getX() - peaces[4].getX())  >= 120 && (int) Math.abs(peaces[5].getX() - peaces[4].getX()) <= 136)
                     ){
                         bottom = true;
                     }
-                    if( (int) peaces[0].getX() == (int) peaces[2].getX() ){
-                        System.out.println("Metade esquerda feita");
-                    }
-                }else if(!bottom && "peace6".equals((String) peaces[j].getTag())){
-                    if(
-                            ((int) peaces[5].getY() - peaces[4].getY()  >= 20 && (int) peaces[5].getY() - peaces[4].getY() <= 26)
+                }
+                if((!mlt || !mlb)){
+                    if( ("peace1".equals((String) peaces[j].getTag()) || "peace3".equals((String) peaces[j].getTag())) &&
+                            ((int) Math.abs(peaces[0].getX() - peaces[2].getX())  >= 20 && (int) Math.abs(peaces[0].getX() - peaces[2].getX()) <= 30)
                                     &&
-                                    ((int) peaces[5].getX() - peaces[4].getX()  >= 120 && (int) peaces[5].getX() - peaces[4].getX() <= 136)
+                                    ((int) Math.abs(peaces[0].getY() - peaces[2].getY())  >= 130 && (int) Math.abs(peaces[0].getY() - peaces[2].getY()) <= 136)
                     ){
-                        bottom = true;
+                        mlt = true;
                     }
-                    if( (int) peaces[0].getX() == (int) peaces[2].getX() ){
-                        System.out.println("Metade esquerda feita");
+                    if( ("peace3".equals((String) peaces[j].getTag()) || "peace5".equals((String) peaces[j].getTag())) &&
+                            ((int) Math.abs(peaces[4].getX() - peaces[2].getX())  >= 20 && (int) Math.abs(peaces[4].getX() - peaces[2].getX()) <= 30)
+                                    &&
+                                    ((int) Math.abs(peaces[4].getY() - peaces[2].getY())  >= 130 && (int) Math.abs(peaces[4].getY() - peaces[2].getY()) <= 136)
+                    ){
+                        mlb = true;
                     }
                 }
-                    switch (event.getAction()) {
+                if((!mrt || !mrb)){
+                    if(
+                            ((int) Math.abs(peaces[1].getX() - peaces[3].getX())  >= 20 && (int) Math.abs(peaces[1].getX() - peaces[3].getX()) <= 30)
+                                    &&
+                                    ((int) Math.abs(peaces[1].getY() - peaces[3].getY())  >= 150 && (int) Math.abs(peaces[1].getY() - peaces[3].getY()) <= 156)
+                    ){
+                        mrt = true;
+                    }
+                    if(
+                            ((int) Math.abs(peaces[3].getX() - peaces[5].getX())  >= 20 && (int) Math.abs(peaces[3].getX() - peaces[5].getX()) <= 30)
+                                    &&
+                                    ((int) Math.abs(peaces[3].getY() - peaces[5].getY())  >= 150 && (int) Math.abs(peaces[3].getY() - peaces[5].getY()) <= 156)
+                    ){
+                        mrb = true;
+                    }
+                }
+
+
+                switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         dX = view.getX() - event.getRawX();
                         dY = view.getY() - event.getRawY();
                         break;
 
                     case MotionEvent.ACTION_MOVE:
-                        if(top && ("peace1".equals((String) view.getTag()))){
-                            peaces[0].animate()
-                                    .x(event.getRawX() + dX)
-                                    .y(event.getRawY() + dY)
-                                    .setDuration(0)
-                                    .start();
+                        if(mrb && mrt && mlt && mlb && top && mid && bottom){
+                            if(
+                                    ((int) Math.abs(peaces[0].getY() - peaces[1].getY())  >= 20 && (int) Math.abs(peaces[0].getY() - peaces[1].getY()) <= 30)
+                                    &&
+                                    ((int) Math.abs(peaces[2].getY() - peaces[3].getY())  >= 0 && (int) Math.abs(peaces[2].getY() - peaces[3].getY()) <= 5)
+                                    &&
+                                    ((int) Math.abs(peaces[4].getY() - peaces[5].getY())  >= 20 && (int) Math.abs(peaces[4].getY() - peaces[5].getY()) <= 26)
 
-                            peaces[1].animate()
-                                    .x(event.getRawX() + dX + 133)
-                                    .y(event.getRawY() + dY - 24)
-                                    .setDuration(0)
-                                    .start();
-                        }else if(top && ("peace2".equals((String) view.getTag()))){
-                            peaces[0].animate()
-                                    .x(event.getRawX() + dX - 133)
-                                    .y(event.getRawY() + dY + 24)
-                                    .setDuration(0)
-                                    .start();
+                                    &&
 
-                            peaces[1].animate()
-                                    .x(event.getRawX() + dX )
-                                    .y(event.getRawY() + dY )
-                                    .setDuration(0)
-                                    .start();
-                        }else if(mid && ("peace3".equals((String) view.getTag()))){
-                            peaces[2].animate()
-                                    .x(event.getRawX() + dX)
-                                    .y(event.getRawY() + dY)
-                                    .setDuration(0)
-                                    .start();
+                                    ((int) Math.abs(peaces[1].getX() - peaces[0].getX())  >= 130 && (int) Math.abs(peaces[1].getX() - peaces[0].getX()) <= 136)
+                                    &&
+                                    ((int) Math.abs(peaces[2].getX() - peaces[3].getX())  >= 116 && (int) Math.abs(peaces[2].getX() - peaces[3].getX()) <= 126)
+                                    &&
+                                    ((int) Math.abs(peaces[4].getX() - peaces[5].getX())  >= 130 && (int) Math.abs(peaces[4].getX() - peaces[5].getX()) <= 136)
+                            ){
+                                System.out.println("Quebra-cabeça feito!");
 
-                            peaces[3].animate()
-                                    .x(event.getRawX() + dX + 122)
-                                    .y(event.getRawY() + dY - 1)
-                                    .setDuration(0)
-                                    .start();
-                        }else if(mid && ("peace4".equals((String) view.getTag()))){
-                            peaces[2].animate()
-                                    .x(event.getRawX() + dX - 122)
-                                    .y(event.getRawY() + dY + 1)
-                                    .setDuration(0)
-                                    .start();
-
-                            peaces[3].animate()
-                                    .x(event.getRawX() + dX )
-                                    .y(event.getRawY() + dY )
-                                    .setDuration(0)
-                                    .start();
-                        }else if(bottom && ("peace5".equals((String) view.getTag()))){
-                            peaces[4].animate()
-                                    .x(event.getRawX() + dX)
-                                    .y(event.getRawY() + dY)
-                                    .setDuration(0)
-                                    .start();
-
-                            peaces[5].animate()
-                                    .x(event.getRawX() + dX + 124)
-                                    .y(event.getRawY() + dY + 24)
-                                    .setDuration(0)
-                                    .start();
-                        }else if(bottom && ("peace6".equals((String) view.getTag()))){
-                            peaces[4].animate()
-                                    .x(event.getRawX() + dX - 124)
-                                    .y(event.getRawY() + dY - 24)
-                                    .setDuration(0)
-                                    .start();
-
-                            peaces[5].animate()
-                                    .x(event.getRawX() + dX )
-                                    .y(event.getRawY() + dY )
-                                    .setDuration(0)
-                                    .start();
-                        }else {
-                            view.animate()
-                                    .x(event.getRawX() + dX)
-                                    .y(event.getRawY() + dY)
-                                    .setDuration(0)
-                                    .start();
+                                for (ImageView peace : peaces) {
+                                    peace.setOnTouchListener((view2, event2) -> {
+                                        return false;
+                                    });
+                                }
+                            }
                         }
+
+                        view.animate()
+                                .x(event.getRawX() + dX)
+                                .y(event.getRawY() + dY)
+                                .setDuration(0)
+                                .start();
+
+                        if(top){
+                            if ("peace1".equals((String) view.getTag())){
+                                peaces[0].animate()
+                                        .x(event.getRawX() + dX)
+                                        .y(event.getRawY() + dY)
+                                        .setDuration(0)
+                                        .start();
+
+                                peaces[1].animate()
+                                        .x(event.getRawX() + dX + 133)
+                                        .y(event.getRawY() + dY - 24)
+                                        .setDuration(0)
+                                        .start();
+                            }
+                            else if("peace2".equals((String) view.getTag())){
+                                peaces[0].animate()
+                                        .x(event.getRawX() + dX - 133)
+                                        .y(event.getRawY() + dY + 24)
+                                        .setDuration(0)
+                                        .start();
+
+                                peaces[1].animate()
+                                        .x(event.getRawX() + dX )
+                                        .y(event.getRawY() + dY )
+                                        .setDuration(0)
+                                        .start();
+                            }
+                        }
+                        if(mid){
+                            if("peace3".equals((String) view.getTag())){
+                                peaces[2].animate()
+                                        .x(event.getRawX() + dX)
+                                        .y(event.getRawY() + dY)
+                                        .setDuration(0)
+                                        .start();
+
+                                peaces[3].animate()
+                                        .x(event.getRawX() + dX + 122)
+                                        .y(event.getRawY() + dY - 1)
+                                        .setDuration(0)
+                                        .start();
+                            }
+                            else if("peace4".equals((String) view.getTag())){
+                                peaces[2].animate()
+                                        .x(event.getRawX() + dX - 122)
+                                        .y(event.getRawY() + dY + 1)
+                                        .setDuration(0)
+                                        .start();
+
+                                peaces[3].animate()
+                                        .x(event.getRawX() + dX )
+                                        .y(event.getRawY() + dY )
+                                        .setDuration(0)
+                                        .start();
+                            }
+
+                        }
+                        if(bottom){
+                            if ("peace5".equals((String) view.getTag())){
+                                peaces[4].animate()
+                                        .x(event.getRawX() + dX)
+                                        .y(event.getRawY() + dY)
+                                        .setDuration(0)
+                                        .start();
+
+                                peaces[5].animate()
+                                        .x(event.getRawX() + dX + 124)
+                                        .y(event.getRawY() + dY + 24)
+                                        .setDuration(0)
+                                        .start();
+                            }
+                            else if("peace6".equals((String) view.getTag())){
+                                peaces[4].animate()
+                                        .x(event.getRawX() + dX - 124)
+                                        .y(event.getRawY() + dY - 24)
+                                        .setDuration(0)
+                                        .start();
+
+                                peaces[5].animate()
+                                        .x(event.getRawX() + dX )
+                                        .y(event.getRawY() + dY )
+                                        .setDuration(0)
+                                        .start();
+                            }
+                        }
+                        if(mlt && !mlb){
+                            if("peace1".equals((String) view.getTag())){
+                                peaces[0].animate()
+                                        .x(event.getRawX() + dX)
+                                        .y(event.getRawY() + dY)
+                                        .setDuration(0)
+                                        .start();
+
+                                peaces[2].animate()
+                                        .x(event.getRawX() + dX + 22)
+                                        .y(event.getRawY() + dY + 130)
+                                        .setDuration(0)
+                                        .start();
+                            }
+                            else if("peace3".equals((String) view.getTag())){
+                                peaces[0].animate()
+                                        .x(event.getRawX() + dX - 22)
+                                        .y(event.getRawY() + dY - 130)
+                                        .setDuration(0)
+                                        .start();
+
+                                peaces[2].animate()
+                                        .x(event.getRawX() + dX )
+                                        .y(event.getRawY() + dY )
+                                        .setDuration(0)
+                                        .start();
+                            }
+                        }
+                        if(mlb && !mlt){
+                            if("peace3".equals((String) view.getTag())){
+                                peaces[2].animate()
+                                        .x(event.getRawX() + dX)
+                                        .y(event.getRawY() + dY)
+                                        .setDuration(0)
+                                        .start();
+
+                                peaces[4].animate()
+                                        .x(event.getRawX() + dX - 22)
+                                        .y(event.getRawY() + dY + 130)
+                                        .setDuration(0)
+                                        .start();
+                            }
+                            else if("peace5".equals((String) view.getTag())){
+                                peaces[2].animate()
+                                        .x(event.getRawX() + dX + 22)
+                                        .y(event.getRawY() + dY - 130)
+                                        .setDuration(0)
+                                        .start();
+
+                                peaces[4].animate()
+                                        .x(event.getRawX() + dX )
+                                        .y(event.getRawY() + dY )
+                                        .setDuration(0)
+                                        .start();
+                            }
+                        }
+                        if(mrt && !mrb){
+                            if("peace2".equals((String) view.getTag())){
+                                peaces[1].animate()
+                                        .x(event.getRawX() + dX)
+                                        .y(event.getRawY() + dY)
+                                        .setDuration(0)
+                                        .start();
+
+                                peaces[3].animate()
+                                        .x(event.getRawX() + dX + 22)
+                                        .y(event.getRawY() + dY + 155)
+                                        .setDuration(0)
+                                        .start();
+                            }
+                            else if("peace4".equals((String) view.getTag())){
+                                peaces[1].animate()
+                                        .x(event.getRawX() + dX - 22)
+                                        .y(event.getRawY() + dY - 155)
+                                        .setDuration(0)
+                                        .start();
+
+                                peaces[3].animate()
+                                        .x(event.getRawX() + dX )
+                                        .y(event.getRawY() + dY )
+                                        .setDuration(0)
+                                        .start();
+                            }
+                        }
+                        if(mrb && !mrt){
+                            if("peace4".equals((String) view.getTag())){
+                                peaces[3].animate()
+                                        .x(event.getRawX() + dX)
+                                        .y(event.getRawY() + dY)
+                                        .setDuration(0)
+                                        .start();
+
+                                peaces[5].animate()
+                                        .x(event.getRawX() + dX - 22)
+                                        .y(event.getRawY() + dY + 155)
+                                        .setDuration(0)
+                                        .start();
+                            }
+                            else if("peace6".equals((String) view.getTag())){
+                                peaces[3].animate()
+                                        .x(event.getRawX() + dX + 22)
+                                        .y(event.getRawY() + dY - 155)
+                                        .setDuration(0)
+                                        .start();
+
+                                peaces[5].animate()
+                                        .x(event.getRawX() + dX )
+                                        .y(event.getRawY() + dY )
+                                        .setDuration(0)
+                                        .start();
+                            }
+                        }
+                        if(mlt && mlb){
+                            if("peace1".equals((String) view.getTag())){
+                                peaces[0].animate()
+                                        .x(event.getRawX() + dX)
+                                        .y(event.getRawY() + dY)
+                                        .setDuration(0)
+                                        .start();
+
+                                peaces[2].animate()
+                                        .x(event.getRawX() + dX + 22)
+                                        .y(event.getRawY() + dY + 130)
+                                        .setDuration(0)
+                                        .start();
+
+                                peaces[4].animate()
+                                        .x(event.getRawX() + dX)
+                                        .y(event.getRawY() + dY + 260)
+                                        .setDuration(0)
+                                        .start();
+                            }
+                            else if("peace3".equals((String) view.getTag())){
+                                peaces[0].animate()
+                                        .x(event.getRawX() + dX - 22)
+                                        .y(event.getRawY() + dY - 130)
+                                        .setDuration(0)
+                                        .start();
+
+                                peaces[2].animate()
+                                        .x(event.getRawX() + dX)
+                                        .y(event.getRawY() + dY)
+                                        .setDuration(0)
+                                        .start();
+
+                                peaces[4].animate()
+                                        .x(event.getRawX() + dX - 22)
+                                        .y(event.getRawY() + dY + 130)
+                                        .setDuration(0)
+                                        .start();
+                            }
+                            else if("peace5".equals((String) view.getTag())){
+                                peaces[0].animate()
+                                        .x(event.getRawX() + dX)
+                                        .y(event.getRawY() + dY - 260)
+                                        .setDuration(0)
+                                        .start();
+
+                                peaces[2].animate()
+                                        .x(event.getRawX() + dX + 22)
+                                        .y(event.getRawY() + dY - 130)
+                                        .setDuration(0)
+                                        .start();
+
+                                peaces[4].animate()
+                                        .x(event.getRawX() + dX)
+                                        .y(event.getRawY() + dY)
+                                        .setDuration(0)
+                                        .start();
+                            }
+                        }
+                        if(mrt && mrb){
+                            if("peace2".equals((String) view.getTag())){
+                                peaces[1].animate()
+                                        .x(event.getRawX() + dX)
+                                        .y(event.getRawY() + dY)
+                                        .setDuration(0)
+                                        .start();
+
+                                peaces[3].animate()
+                                        .x(event.getRawX() + dX + 22)
+                                        .y(event.getRawY() + dY + 155)
+                                        .setDuration(0)
+                                        .start();
+
+                                peaces[5].animate()
+                                        .x(event.getRawX() + dX)
+                                        .y(event.getRawY() + dY + 310)
+                                        .setDuration(0)
+                                        .start();
+                            }
+                            else if("peace4".equals((String) view.getTag())){
+                                peaces[1].animate()
+                                        .x(event.getRawX() + dX - 22)
+                                        .y(event.getRawY() + dY - 155)
+                                        .setDuration(0)
+                                        .start();
+
+                                peaces[3].animate()
+                                        .x(event.getRawX() + dX)
+                                        .y(event.getRawY() + dY)
+                                        .setDuration(0)
+                                        .start();
+
+                                peaces[5].animate()
+                                        .x(event.getRawX() + dX - 22)
+                                        .y(event.getRawY() + dY + 155)
+                                        .setDuration(0)
+                                        .start();
+                            }
+                            else if("peace6".equals((String) view.getTag())){
+                                peaces[1].animate()
+                                        .x(event.getRawX() + dX)
+                                        .y(event.getRawY() + dY - 310)
+                                        .setDuration(0)
+                                        .start();
+
+                                peaces[3].animate()
+                                        .x(event.getRawX() + dX + 22)
+                                        .y(event.getRawY() + dY - 155)
+                                        .setDuration(0)
+                                        .start();
+
+                                peaces[5].animate()
+                                        .x(event.getRawX() + dX)
+                                        .y(event.getRawY() + dY)
+                                        .setDuration(0)
+                                        .start();
+                            }
+                        }
+
+
                         break;
 
                     default:
                         return false;
                 }
-
-
                 return true;
             });
         }
