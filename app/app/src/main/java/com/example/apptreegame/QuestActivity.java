@@ -22,12 +22,6 @@ public class QuestActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.quests_medio);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.quests_medio), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
 
         TextView quest;
         quest = findViewById(R.id.nQuest);

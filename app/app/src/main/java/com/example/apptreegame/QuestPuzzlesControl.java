@@ -1,33 +1,27 @@
 package com.example.apptreegame;
 
-import android.annotation.SuppressLint;
-import android.os.Bundle;
 import android.view.MotionEvent;
+import android.view.View;
 import android.widget.ImageView;
-import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Random;
 
-public class QuestPuzzles extends AppCompatActivity {
+public class QuestPuzzlesControl implements QuestController{
 
     private float dX, dY;
     private boolean top, mid, mlt, mlb, mrt, mrb, bottom = false;
     // mrb = mid right bottom
     // mlb = mid left bottom
 
-    @SuppressLint("ClickableViewAccessibility")
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.quest_move_peaces);
-
+    public void initialize(View rootView) {
         ImageView[] peaces = {
-                findViewById(R.id.peaces),
-                findViewById(R.id.peaces2),
-                findViewById(R.id.peaces3),
-                findViewById(R.id.peaces4),
-                findViewById(R.id.peaces5),
-                findViewById(R.id.peaces6)
+                rootView.findViewById(R.id.peaces),
+                rootView.findViewById(R.id.peaces2),
+                rootView.findViewById(R.id.peaces3),
+                rootView.findViewById(R.id.peaces4),
+                rootView.findViewById(R.id.peaces5),
+                rootView.findViewById(R.id.peaces6)
         };
 
         Random rand = new Random();
@@ -45,8 +39,8 @@ public class QuestPuzzles extends AppCompatActivity {
                 if(!top){
                     if(
                             ((int) Math.abs(peaces[0].getY() - peaces[1].getY())  >= 20 && (int) Math.abs(peaces[0].getY() - peaces[1].getY()) <= 30)
-                            &&
-                            ((int) Math.abs(peaces[1].getX() - peaces[0].getX())  >= 130 && (int) Math.abs(peaces[1].getX() - peaces[0].getX()) <= 136)
+                                    &&
+                                    ((int) Math.abs(peaces[1].getX() - peaces[0].getX())  >= 130 && (int) Math.abs(peaces[1].getX() - peaces[0].getX()) <= 136)
                     ){
                         top = true;
                     }
@@ -72,15 +66,15 @@ public class QuestPuzzles extends AppCompatActivity {
                 if((!mlt || !mlb)){
                     if( ("peace1".equals((String) peaces[j].getTag()) || "peace3".equals((String) peaces[j].getTag())) &&
                             ((int) Math.abs(peaces[0].getX() - peaces[2].getX())  >= 20 && (int) Math.abs(peaces[0].getX() - peaces[2].getX()) <= 30)
-                                    &&
-                                    ((int) Math.abs(peaces[0].getY() - peaces[2].getY())  >= 130 && (int) Math.abs(peaces[0].getY() - peaces[2].getY()) <= 136)
+                            &&
+                            ((int) Math.abs(peaces[0].getY() - peaces[2].getY())  >= 130 && (int) Math.abs(peaces[0].getY() - peaces[2].getY()) <= 136)
                     ){
                         mlt = true;
                     }
                     if( ("peace3".equals((String) peaces[j].getTag()) || "peace5".equals((String) peaces[j].getTag())) &&
                             ((int) Math.abs(peaces[4].getX() - peaces[2].getX())  >= 20 && (int) Math.abs(peaces[4].getX() - peaces[2].getX()) <= 30)
-                                    &&
-                                    ((int) Math.abs(peaces[4].getY() - peaces[2].getY())  >= 130 && (int) Math.abs(peaces[4].getY() - peaces[2].getY()) <= 136)
+                            &&
+                            ((int) Math.abs(peaces[4].getY() - peaces[2].getY())  >= 130 && (int) Math.abs(peaces[4].getY() - peaces[2].getY()) <= 136)
                     ){
                         mlb = true;
                     }
@@ -113,18 +107,18 @@ public class QuestPuzzles extends AppCompatActivity {
                         if(mrb && mrt && mlt && mlb && top && mid && bottom){
                             if(
                                     ((int) Math.abs(peaces[0].getY() - peaces[1].getY())  >= 20 && (int) Math.abs(peaces[0].getY() - peaces[1].getY()) <= 30)
-                                    &&
-                                    ((int) Math.abs(peaces[2].getY() - peaces[3].getY())  >= 0 && (int) Math.abs(peaces[2].getY() - peaces[3].getY()) <= 5)
-                                    &&
-                                    ((int) Math.abs(peaces[4].getY() - peaces[5].getY())  >= 20 && (int) Math.abs(peaces[4].getY() - peaces[5].getY()) <= 26)
+                                            &&
+                                            ((int) Math.abs(peaces[2].getY() - peaces[3].getY())  >= 0 && (int) Math.abs(peaces[2].getY() - peaces[3].getY()) <= 5)
+                                            &&
+                                            ((int) Math.abs(peaces[4].getY() - peaces[5].getY())  >= 20 && (int) Math.abs(peaces[4].getY() - peaces[5].getY()) <= 26)
 
-                                    &&
+                                            &&
 
-                                    ((int) Math.abs(peaces[1].getX() - peaces[0].getX())  >= 130 && (int) Math.abs(peaces[1].getX() - peaces[0].getX()) <= 136)
-                                    &&
-                                    ((int) Math.abs(peaces[2].getX() - peaces[3].getX())  >= 116 && (int) Math.abs(peaces[2].getX() - peaces[3].getX()) <= 126)
-                                    &&
-                                    ((int) Math.abs(peaces[4].getX() - peaces[5].getX())  >= 130 && (int) Math.abs(peaces[4].getX() - peaces[5].getX()) <= 136)
+                                            ((int) Math.abs(peaces[1].getX() - peaces[0].getX())  >= 130 && (int) Math.abs(peaces[1].getX() - peaces[0].getX()) <= 136)
+                                            &&
+                                            ((int) Math.abs(peaces[2].getX() - peaces[3].getX())  >= 116 && (int) Math.abs(peaces[2].getX() - peaces[3].getX()) <= 126)
+                                            &&
+                                            ((int) Math.abs(peaces[4].getX() - peaces[5].getX())  >= 130 && (int) Math.abs(peaces[4].getX() - peaces[5].getX()) <= 136)
                             ){
                                 System.out.println("Quebra-cabeça feito!");
 
@@ -467,5 +461,13 @@ public class QuestPuzzles extends AppCompatActivity {
                 return true;
             });
         }
+    }
+
+    public void onResume() {
+
+    }
+
+    public void onPause() {
+
     }
 }
