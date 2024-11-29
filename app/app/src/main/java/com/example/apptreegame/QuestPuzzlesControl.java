@@ -1,5 +1,6 @@
 package com.example.apptreegame;
 
+import android.annotation.SuppressLint;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
@@ -13,6 +14,7 @@ public class QuestPuzzlesControl implements QuestController{
     // mrb = mid right bottom
     // mlb = mid left bottom
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     public void initialize(View rootView) {
         ImageView[] peaces = {
