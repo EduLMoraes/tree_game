@@ -5,6 +5,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.example.apptreegame.initial_fundamental.TemplateQuest;
+
 import java.util.Random;
 
 public class QuestPuzzlesControl implements QuestController{
@@ -16,7 +18,7 @@ public class QuestPuzzlesControl implements QuestController{
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
-    public void initialize(View rootView) {
+    public void initialize(View rootView, TemplateQuest root) {
         ImageView[] peaces = {
                 rootView.findViewById(R.id.peaces),
                 rootView.findViewById(R.id.peaces2),

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="É muito importante ter árvores plantadas na nossa cidade, porque elas limpam o nosso ar e produzem sombra, que reduz a sensação de calor. Abaixo, você tem as seis letras que formam a palavra árvore na tela, ordene as letras corretamente no retângulo abaixo:"
+            android:textAlignment="textStart"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="372dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/iniciais_questao2_maca" />
+
+                <ImageView
+                    android:id="@+id/image2"
+                    android:layout_width="372dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/iniciais_questao2_folha1" />
+
+                <ImageView
+                    android:id="@+id/image3"
+                    android:layout_width="372dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/iniciais_questao2_tronco" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal|center_vertical">
+
+                <ImageView
+                    android:id="@+id/rectangle"
+                    android:layout_width="306dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="false"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="2dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/retangulo" />
+
+                <ImageView
+                    android:id="@+id/rectangle2"
+                    android:layout_width="263dp"
+                    android:layout_height="50dp"
+                    android:layout_above="@+id/rectangle"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/retangulo" />
+
+                <ImageView
+                    android:id="@+id/rectangle3"
+                    android:layout_width="265dp"
+                    android:layout_height="50dp"
+                    android:layout_above="@+id/rectangle2"
+                    android:layout_alignParentTop="false"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/retangulo" />
+
+                <TextView
+                    android:id="@+id/folha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/square1"
+                    android:layout_alignEnd="@+id/rectangle3"
+                    android:layout_alignBottom="@+id/rectangle3"
+                    android:layout_marginTop="-11dp"
+                    android:layout_marginEnd="38dp"
+                    android:layout_marginBottom="-3dp"
+                    android:text="FOLHA"
+                    android:textSize="46sp" />
+
+                <TextView
+                    android:id="@+id/tronco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/rectangle2"
+                    android:layout_alignEnd="@id/rectangle2"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginEnd="24dp"
+                    android:text="TRONCO"
+                    android:textSize="46sp" />
+
+                <TextView
+                    android:id="@+id/fruto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/rectangle"
+                    android:layout_alignEnd="@+id/rectangle"
+                    android:layout_marginTop="-6dp"
+                    android:layout_marginEnd="62dp"
+                    android:text="FRUTO"
+                    android:textSize="46sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

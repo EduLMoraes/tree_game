@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -120,7 +121,7 @@
                     app:srcCompat="@drawable/retangulo" />
 
                 <TextView
-                    android:id="@+id/e"
+                    android:id="@+id/folha"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignTop="@+id/square1"
@@ -131,7 +132,7 @@
                     android:textSize="56sp" />
 
                 <TextView
-                    android:id="@+id/v"
+                    android:id="@+id/tronco"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignTop="@id/imageView5"
@@ -142,7 +143,7 @@
                     android:textSize="56sp" />
 
                 <TextView
-                    android:id="@+id/r"
+                    android:id="@+id/fruto"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignTop="@id/imageView6"
