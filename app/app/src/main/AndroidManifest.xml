@@ -39,6 +39,24 @@
 
         </activity>
         <activity
+            android:name=".initial_fundamental.QuestTwo"
+            android:exported="true"
+            android:resizeableActivity="true">
+
+        </activity>
+        <activity
+            android:name=".initial_fundamental.QuestThree"
+            android:exported="true"
+            android:resizeableActivity="true">
+
+        </activity>
+        <activity
+            android:name=".initial_fundamental.QuestFour"
+            android:exported="true"
+            android:resizeableActivity="true">
+
+        </activity>
+        <activity
             android:name=".initial_fundamental.TemplateQuest"
             android:exported="true"
             android:label="@string/title_activity_template_quest"

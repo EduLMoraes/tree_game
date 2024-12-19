@@ -61,19 +61,20 @@ public class QuestOne implements QuestController {
                             }
                         }
 
-                        System.out.println(order);
-                        if(valid_position()){
-                            for (TextView letter2 : letters){
-                                letter2.setOnTouchListener((v, e) -> { return true; });
-                            }
-                            rootView.findViewById(R.id.layout).setBackgroundColor(Color.rgb(50, 255, 50));
-                            root.replaceInclude(R.id.quest, R.layout.efi_quest_2, new QuestTwo());
-                        }
-
                         break;
 
                     default:
                         return false;
+                }
+
+                if(valid_position()){
+                    for (TextView letter2 : letters){
+                        letter2.setOnTouchListener((v, e) -> { return true; });
+                    }
+
+                    rootView.findViewById(R.id.quest).setBackgroundColor(Color.rgb(50, 255, 50));
+
+                    root.replaceInclude(R.layout.efi_quest_2, new QuestTwo());
                 }
 
                 return true;
