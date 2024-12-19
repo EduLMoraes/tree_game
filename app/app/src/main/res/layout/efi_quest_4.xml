@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/verso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/iniciais_questao3_verso"
+        android:visibility="invisible"
+        tools:layout_editor_absoluteY="360dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Os frutos ao servirem de alimento para os animais são levados para longe da planta de origem e isso contribui para espalhar as sementes no ambiente. Forme pares de frutos iguais neste jogo da memória, tocando nas cartas:"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#A8A8A8"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/col1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center|center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/fig1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/iniciais_questao3_ameixa_1"
+                    android:backgroundTintMode="src_in"
+                    android:clickable="true" />
+
+                <ImageView
+                    android:id="@+id/fig2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/iniciais_questao3_ameixa_1"
+                    android:clickable="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/col2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center|center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/fig3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/iniciais_questao3_limao"
+                    android:clickable="true" />
+
+                <ImageView
+                    android:id="@+id/fig4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/iniciais_questao3_limao"
+                    android:clickable="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/col3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center|center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/fig5"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/iniciais_questao3_cereja_1"
+                    android:clickable="true" />
+
+                <ImageView
+                    android:id="@+id/fig6"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/iniciais_questao3_cereja_1"
+                    android:clickable="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/col4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center|center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/fig7"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/iniciais_questao3_laranja_1"
+                    android:clickable="true" />
+
+                <ImageView
+                    android:id="@+id/fig8"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/iniciais_questao3_laranja_1"
+                    android:clickable="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/col5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center|center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/fig9"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/iniciais_questao3_pessego"
+                    android:clickable="true" />
+
+                <ImageView
+                    android:id="@+id/fig10"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/iniciais_questao3_pessego"
+                    android:clickable="true" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
