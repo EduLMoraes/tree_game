@@ -1,13 +1,14 @@
 package com.example.apptreegame.initial_fundamental;
-import android.annotation.SuppressLint;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.widget.ImageView;
+
 import com.example.apptreegame.QuestController;
 import com.example.apptreegame.R;
+
 import java.util.Random;
 
-public class QuestThree implements QuestController {
+public class Quest12 implements QuestController {
     private boolean isCorrect = true;
     private Random rand =  new Random();
     private int clicks = 0;
@@ -23,20 +24,19 @@ public class QuestThree implements QuestController {
     };
     private int lastClick = 200;
 
-    @SuppressLint("ClickableViewAccessibility")
     @Override
     public void initialize(View rootView, TemplateQuest root) {
         ImageView[] figs = {
-                rootView.findViewById(R.id.fig1),
-                rootView.findViewById(R.id.fig2),
-                rootView.findViewById(R.id.fig3),
-                rootView.findViewById(R.id.fig4),
-                rootView.findViewById(R.id.fig5),
-                rootView.findViewById(R.id.fig6),
-                rootView.findViewById(R.id.fig7),
-                rootView.findViewById(R.id.fig8),
-                rootView.findViewById(R.id.fig9),
-                rootView.findViewById(R.id.fig10)
+                root.findViewById(R.id.fig1),
+                root.findViewById(R.id.fig2),
+                root.findViewById(R.id.fig3),
+                root.findViewById(R.id.fig4),
+                root.findViewById(R.id.fig5),
+                root.findViewById(R.id.fig6),
+                root.findViewById(R.id.fig7),
+                root.findViewById(R.id.fig8),
+                root.findViewById(R.id.fig9),
+                root.findViewById(R.id.fig10)
         };
 
         System.out.println(figs[0].getBackground() + " X " + figs[1].getBackground());
@@ -61,6 +61,8 @@ public class QuestThree implements QuestController {
 
         to_hide(figs, root);
 
+
+
         for (int i = 0; i< figs.length; i++){
             int finalI = i;
             figs[i].setOnClickListener((v) -> {
@@ -82,7 +84,7 @@ public class QuestThree implements QuestController {
                 }
 
                 if(isFinish(figs)){
-                    root.replaceInclude(R.layout.efi_quest_4, new QuestFour());
+                    root.replaceInclude(R.layout.efi_quest_1, new Quest1());
                 }
 
             });

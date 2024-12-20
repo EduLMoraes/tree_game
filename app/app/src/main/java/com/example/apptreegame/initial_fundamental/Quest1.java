@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.example.apptreegame.QuestController;
 import com.example.apptreegame.R;
 
-public class QuestOne implements QuestController {
+public class Quest1 implements QuestController {
     public static boolean isCorrect = false;
     float dX, dY = 0.0f;
     char[] order = {' ', ' ', ' ', ' ', ' ', ' '};
@@ -74,7 +74,7 @@ public class QuestOne implements QuestController {
 
                     rootView.findViewById(R.id.quest).setBackgroundColor(Color.rgb(50, 255, 50));
 
-                    root.replaceInclude(R.layout.efi_quest_2, new QuestTwo());
+                    root.replaceInclude(R.layout.efi_quest_2, new Quest2());
                 }
 
                 return true;

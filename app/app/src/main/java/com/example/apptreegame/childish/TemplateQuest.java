@@ -1,4 +1,4 @@
-package com.example.apptreegame.initial_fundamental;
+package com.example.apptreegame.childish;
 
 import android.os.Bundle;
 import android.view.View;

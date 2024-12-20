@@ -73,8 +73,6 @@ public class QuestActivity extends AppCompatActivity {
         optionB.setText("B) "+"Nicho Ecológico");
         optionC.setText("C) "+"População");
         optionD.setText("D) "+"Sociedade");
-
-
     }
 }
 

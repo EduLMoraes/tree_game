@@ -1,4 +1,4 @@
-package com.example.apptreegame.initial_fundamental;
+package com.example.apptreegame.childish;
 
 import android.annotation.SuppressLint;
 import android.graphics.Color;
@@ -10,7 +10,7 @@ import android.widget.TextView;
 import com.example.apptreegame.QuestController;
 import com.example.apptreegame.R;
 
-public class QuestTwo implements QuestController {
+public class Quest2 implements QuestController {
     public static boolean isCorrect = false;
     float dX, dY = 0.0f;
     boolean[] order = {false, false, false};
@@ -90,7 +90,7 @@ public class QuestTwo implements QuestController {
                     }
                     rootView.findViewById(R.id.quest).setBackgroundColor(Color.rgb(50, 255, 50));
 
-                    root.replaceInclude(R.layout.efi_quest_3, new QuestThree());
+                    root.replaceInclude(R.layout.efi_quest_3, new Quest3());
                 }
                 return true;
             });

@@ -1,4 +1,4 @@
-package com.example.apptreegame.initial_fundamental;
+package com.example.apptreegame.childish;
 import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.widget.ImageView;
@@ -8,7 +8,7 @@ import com.example.apptreegame.R;
 
 import java.util.Random;
 
-public class QuestFour implements QuestController {
+public class Quest5 implements QuestController {
     private boolean isCorrect = true;
     private Random rand =  new Random();
     private int clicks = 0;
@@ -84,7 +84,7 @@ public class QuestFour implements QuestController {
                 }
 
                 if(isFinish(figs)){
-                    root.replaceInclude(R.layout.efi_quest_1, new QuestOne());
+                    root.replaceInclude(R.layout.efi_quest_1, new Quest1());
                 }
 
             });

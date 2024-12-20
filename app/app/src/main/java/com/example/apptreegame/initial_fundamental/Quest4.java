@@ -1,20 +1,19 @@
-package com.example.apptreegame;
+package com.example.apptreegame.initial_fundamental;
 
 import android.annotation.SuppressLint;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.example.apptreegame.initial_fundamental.TemplateQuest;
+import com.example.apptreegame.QuestController;
+import com.example.apptreegame.R;
 
 import java.util.Random;
 
-public class QuestPuzzlesControl implements QuestController{
+public class Quest4 implements QuestController {
 
     private float dX, dY;
     private boolean top, mid, mlt, mlb, mrt, mrb, bottom = false;
-    // mrb = mid right bottom
-    // mlb = mid left bottom
 
     @SuppressLint("ClickableViewAccessibility")
     @Override

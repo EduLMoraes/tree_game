@@ -18,87 +18,45 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/peaces7"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/efi_peace_7"
-                android:tag="peace7" />
-
-            <ImageView
-                android:id="@+id/peaces8"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/efi_peace_8"
-                android:tag="peace8" />
-
-            <ImageView
-                android:id="@+id/peaces9"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/efi_peace_9"
-                android:tag="peace9" />
-
-            <ImageView
-                android:id="@+id/peaces10"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/efi_peace_10"
-                android:tag="peace10" />
-
-            <ImageView
-                android:id="@+id/peaces11"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/efi_peace_11"
-                android:tag="peace11" />
-
-            <ImageView
-                android:id="@+id/peaces12"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/efi_peace_12"
-                android:tag="peace12" />
-
-            <ImageView
                 android:id="@+id/peaces"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/efi_peace1"
+                android:src="@drawable/iniciais_peace1"
                 android:tag="peace1" />
 
             <ImageView
                 android:id="@+id/peaces2"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/efi_peace_2"
+                android:src="@drawable/iniciais_peace2"
                 android:tag="peace2" />
 
             <ImageView
                 android:id="@+id/peaces3"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/efi_peace_3"
+                android:src="@drawable/iniciais_peace3"
                 android:tag="peace3" />
 
             <ImageView
                 android:id="@+id/peaces4"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/efi_peace_4"
+                android:src="@drawable/iniciais_peace4"
                 android:tag="peace4" />
 
             <ImageView
                 android:id="@+id/peaces5"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/efi_peace_5"
+                android:src="@drawable/iniciais_peace5"
                 android:tag="peace5" />
 
             <ImageView
                 android:id="@+id/peaces6"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@drawable/efi_peace_6"
+                android:src="@drawable/iniciais_peace6"
                 android:tag="peace6" />
 
         </RelativeLayout>
