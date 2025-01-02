@@ -19,7 +19,7 @@ public class TemplateQuest extends AppCompatActivity {
         setContentView(R.layout.activity_template_quest);
         View include = findViewById(R.id.quest);
 
-        replaceInclude(R.layout.efi_quest_4, new Quest4());
+        replaceInclude(R.layout.efi_quest_5, new Quest5());
     }
 
     public void replaceInclude(int newLayoutResId, QuestController controller) {

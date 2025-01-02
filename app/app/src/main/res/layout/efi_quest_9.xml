@@ -22,7 +22,7 @@
             android:id="@+id/description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Os frutos ao servirem de alimento para os animais são levados para longe da planta de origem e isso contribui para espalhar as sementes no ambiente. Forme pares de frutos iguais neste jogo da memória, tocando nas cartas:"
+            android:text="As árvores podem possuir diferentes cores. As cores das folhas são, geralmente, verdes porque possuem um pigmento verde chamado de clorofila. Os troncos não possuem clorofila, por isso, não são verdes. Pinte a imagem abaixo, clicando na cor e em seguida na parte  que deseja colorir:"
             android:textSize="16sp" />
 
     </LinearLayout>

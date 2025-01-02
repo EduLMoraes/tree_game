@@ -22,7 +22,7 @@
             android:id="@+id/description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Os frutos ao servirem de alimento para os animais são levados para longe da planta de origem e isso contribui para espalhar as sementes no ambiente. Forme pares de frutos iguais neste jogo da memória, tocando nas cartas:"
+            android:text="Muitos frutos são nutritivos e servem de alimento. Toque na imagem do fruto e de seu nome correspondente logo em seguida para formar os pares corretos: "
             android:textSize="16sp" />
 
     </LinearLayout>

@@ -7,262 +7,277 @@
     android:layout_height="match_parent"
     android:background="@color/material_dynamic_neutral30">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/sombra7"
-            android:layout_width="122dp"
-            android:layout_height="79dp"
-            android:layout_above="@+id/sombra11"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="240dp"
-            android:layout_marginBottom="-18dp"
-            android:src="@drawable/sombra7"
-            android:tag="peace7" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Plantar árvores é um ato extremamente importante para a preservação das espécies vegetais e animais. As árvores podem abrigar tanto animais como plantas, além de fornecer alimento para muitas espécies. Monte o quebra-cabeça abaixo em que uma família está plantando e cuidando das árvores."
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/white" />
 
-        <ImageView
-            android:id="@+id/sombra8"
-            android:layout_width="77dp"
-            android:layout_height="80dp"
-            android:layout_above="@+id/sombra12"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="188dp"
-            android:layout_marginBottom="-18dp"
-            android:src="@drawable/sombra8"
-            android:tag="peace8" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/sombra9"
-            android:layout_width="99dp"
-            android:layout_height="61dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="false"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="150dp"
-            android:layout_marginBottom="80dp"
-            android:src="@drawable/sombra9"
-            android:tag="peace9" />
+            <ImageView
+                android:id="@+id/sombra7"
+                android:layout_width="122dp"
+                android:layout_height="79dp"
+                android:layout_above="@+id/sombra11"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="240dp"
+                android:layout_marginBottom="-18dp"
+                android:src="@drawable/sombra7"
+                android:tag="peace7" />
 
-        <ImageView
-            android:id="@+id/sombra10"
-            android:layout_width="78dp"
-            android:layout_height="78dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="337dp"
-            android:layout_marginBottom="80dp"
-            android:src="@drawable/sombra10"
-            android:tag="peace10" />
+            <ImageView
+                android:id="@+id/sombra8"
+                android:layout_width="77dp"
+                android:layout_height="80dp"
+                android:layout_above="@+id/sombra12"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="188dp"
+                android:layout_marginBottom="-18dp"
+                android:src="@drawable/sombra8"
+                android:tag="peace8" />
 
-        <ImageView
-            android:id="@+id/sombra11"
-            android:layout_width="119dp"
-            android:layout_height="61dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="242dp"
-            android:layout_marginBottom="79dp"
-            android:src="@drawable/sombra11"
-            android:tag="peace11" />
+            <ImageView
+                android:id="@+id/sombra9"
+                android:layout_width="99dp"
+                android:layout_height="61dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="150dp"
+                android:layout_marginBottom="80dp"
+                android:src="@drawable/sombra9"
+                android:tag="peace9" />
 
-        <ImageView
-            android:id="@+id/sombra12"
-            android:layout_width="76dp"
-            android:layout_height="79dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="188dp"
-            android:layout_marginBottom="79dp"
-            android:src="@drawable/sombra12"
-            android:tag="peace12" />
+            <ImageView
+                android:id="@+id/sombra10"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="337dp"
+                android:layout_marginBottom="80dp"
+                android:src="@drawable/sombra10"
+                android:tag="peace10" />
 
-        <ImageView
-            android:id="@+id/sombra1"
-            android:layout_width="79dp"
-            android:layout_height="81dp"
-            android:layout_above="@+id/sombra5"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="false"
-            android:layout_alignParentEnd="false"
-            android:layout_marginStart="150dp"
-            android:layout_marginTop="95dp"
-            android:layout_marginBottom="-19dp"
-            android:src="@drawable/sombra1"
-            android:tag="peace1" />
+            <ImageView
+                android:id="@+id/sombra11"
+                android:layout_width="119dp"
+                android:layout_height="61dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="242dp"
+                android:layout_marginBottom="79dp"
+                android:src="@drawable/sombra11"
+                android:tag="peace11" />
 
-        <ImageView
-            android:id="@+id/sombra2"
-            android:layout_width="125dp"
-            android:layout_height="62dp"
-            android:layout_above="@+id/sombra6"
-            android:layout_alignParentTop="false"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="97dp"
-            android:layout_marginEnd="311dp"
-            android:layout_marginBottom="-18dp"
-            android:src="@drawable/sombra2"
-            android:tag="peace2" />
+            <ImageView
+                android:id="@+id/sombra12"
+                android:layout_width="76dp"
+                android:layout_height="79dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="188dp"
+                android:layout_marginBottom="79dp"
+                android:src="@drawable/sombra12"
+                android:tag="peace12" />
 
-        <ImageView
-            android:id="@+id/sombra3"
-            android:layout_width="76dp"
-            android:layout_height="78dp"
-            android:layout_above="@+id/sombra7"
-            android:layout_alignParentTop="false"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="99dp"
-            android:layout_marginEnd="262dp"
-            android:layout_marginBottom="-18dp"
-            android:src="@drawable/sombra3"
-            android:tag="peace3" />
+            <ImageView
+                android:id="@+id/sombra1"
+                android:layout_width="79dp"
+                android:layout_height="81dp"
+                android:layout_above="@+id/sombra5"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="false"
+                android:layout_alignParentEnd="false"
+                android:layout_marginStart="150dp"
+                android:layout_marginTop="95dp"
+                android:layout_marginBottom="-19dp"
+                android:src="@drawable/sombra1"
+                android:tag="peace1" />
 
-        <ImageView
-            android:id="@+id/sombra4"
-            android:layout_width="98dp"
-            android:layout_height="60dp"
-            android:layout_above="@+id/sombra8"
-            android:layout_alignParentTop="false"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="98dp"
-            android:layout_marginEnd="188dp"
-            android:layout_marginBottom="-18dp"
-            android:src="@drawable/sombra4"
-            android:tag="peace4" />
+            <ImageView
+                android:id="@+id/sombra2"
+                android:layout_width="125dp"
+                android:layout_height="62dp"
+                android:layout_above="@+id/sombra6"
+                android:layout_alignParentTop="false"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="97dp"
+                android:layout_marginEnd="311dp"
+                android:layout_marginBottom="-18dp"
+                android:src="@drawable/sombra2"
+                android:tag="peace2" />
 
-        <ImageView
-            android:id="@+id/sombra5"
-            android:layout_width="99dp"
-            android:layout_height="81dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="150dp"
-            android:layout_marginEnd="390dp"
-            android:layout_marginBottom="122dp"
-            android:src="@drawable/sombra5"
-            android:tag="peace5" />
+            <ImageView
+                android:id="@+id/sombra3"
+                android:layout_width="76dp"
+                android:layout_height="78dp"
+                android:layout_above="@+id/sombra7"
+                android:layout_alignParentTop="false"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="99dp"
+                android:layout_marginEnd="262dp"
+                android:layout_marginBottom="-18dp"
+                android:src="@drawable/sombra3"
+                android:tag="peace3" />
 
-        <ImageView
-            android:id="@+id/sombra6"
-            android:layout_width="78dp"
-            android:layout_height="79dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="337dp"
-            android:layout_marginBottom="140dp"
-            android:src="@drawable/sombra6"
-            android:tag="peace6" />
+            <ImageView
+                android:id="@+id/sombra4"
+                android:layout_width="98dp"
+                android:layout_height="60dp"
+                android:layout_above="@+id/sombra8"
+                android:layout_alignParentTop="false"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="98dp"
+                android:layout_marginEnd="188dp"
+                android:layout_marginBottom="-18dp"
+                android:src="@drawable/sombra4"
+                android:tag="peace4" />
 
-        <ImageView
-            android:id="@+id/peaces7"
-            android:layout_width="122dp"
-            android:layout_height="79dp"
-            android:layout_alignParentEnd="false"
-            android:layout_alignParentBottom="false"
-            android:src="@drawable/efi_peace_7"
-            android:tag="peace7" />
+            <ImageView
+                android:id="@+id/sombra5"
+                android:layout_width="99dp"
+                android:layout_height="81dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="150dp"
+                android:layout_marginEnd="390dp"
+                android:layout_marginBottom="122dp"
+                android:src="@drawable/sombra5"
+                android:tag="peace5" />
 
-        <ImageView
-            android:id="@+id/peaces8"
-            android:layout_width="77dp"
-            android:layout_height="80dp"
-            android:layout_alignParentEnd="false"
-            android:layout_alignParentBottom="false"
-            android:src="@drawable/efi_peace_8"
-            android:tag="peace8" />
+            <ImageView
+                android:id="@+id/sombra6"
+                android:layout_width="78dp"
+                android:layout_height="79dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="337dp"
+                android:layout_marginBottom="140dp"
+                android:src="@drawable/sombra6"
+                android:tag="peace6" />
 
-        <ImageView
-            android:id="@+id/peaces9"
-            android:layout_width="99dp"
-            android:layout_height="61dp"
-            android:layout_alignParentEnd="false"
-            android:layout_alignParentBottom="false"
-            android:src="@drawable/efi_peace_9"
-            android:tag="peace9" />
+            <ImageView
+                android:id="@+id/peaces7"
+                android:layout_width="122dp"
+                android:layout_height="79dp"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentBottom="false"
+                android:src="@drawable/efi_peace_7"
+                android:tag="peace7" />
 
-        <ImageView
-            android:id="@+id/peaces10"
-            android:layout_width="78dp"
-            android:layout_height="78dp"
-            android:layout_alignParentEnd="false"
-            android:layout_alignParentBottom="false"
-            android:src="@drawable/efi_peace_10"
-            android:tag="peace10" />
+            <ImageView
+                android:id="@+id/peaces8"
+                android:layout_width="77dp"
+                android:layout_height="80dp"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentBottom="false"
+                android:src="@drawable/efi_peace_8"
+                android:tag="peace8" />
 
-        <ImageView
-            android:id="@+id/peaces11"
-            android:layout_width="119dp"
-            android:layout_height="61dp"
-            android:layout_alignParentEnd="false"
-            android:layout_alignParentBottom="false"
-            android:src="@drawable/efi_peace_11"
-            android:tag="peace11" />
+            <ImageView
+                android:id="@+id/peaces9"
+                android:layout_width="99dp"
+                android:layout_height="61dp"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentBottom="false"
+                android:src="@drawable/efi_peace_9"
+                android:tag="peace9" />
 
-        <ImageView
-            android:id="@+id/peaces12"
-            android:layout_width="76dp"
-            android:layout_height="79dp"
-            android:layout_alignParentEnd="false"
-            android:layout_alignParentBottom="false"
-            android:src="@drawable/efi_peace_12"
-            android:tag="peace12" />
+            <ImageView
+                android:id="@+id/peaces10"
+                android:layout_width="78dp"
+                android:layout_height="78dp"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentBottom="false"
+                android:src="@drawable/efi_peace_10"
+                android:tag="peace10" />
 
-        <ImageView
-            android:id="@+id/peaces"
-            android:layout_width="79dp"
-            android:layout_height="81dp"
-            android:layout_alignParentEnd="false"
-            android:layout_alignParentBottom="false"
-            android:src="@drawable/efi_peace1"
-            android:tag="peace1" />
+            <ImageView
+                android:id="@+id/peaces11"
+                android:layout_width="119dp"
+                android:layout_height="61dp"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentBottom="false"
+                android:src="@drawable/efi_peace_11"
+                android:tag="peace11" />
 
-        <ImageView
-            android:id="@+id/peaces2"
-            android:layout_width="125dp"
-            android:layout_height="62dp"
-            android:layout_alignParentEnd="false"
-            android:layout_alignParentBottom="false"
-            android:src="@drawable/efi_peace_2"
-            android:tag="peace2" />
+            <ImageView
+                android:id="@+id/peaces12"
+                android:layout_width="76dp"
+                android:layout_height="79dp"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentBottom="false"
+                android:src="@drawable/efi_peace_12"
+                android:tag="peace12" />
 
-        <ImageView
-            android:id="@+id/peaces3"
-            android:layout_width="76dp"
-            android:layout_height="78dp"
-            android:layout_alignParentEnd="false"
-            android:layout_alignParentBottom="false"
-            android:src="@drawable/efi_peace_3"
-            android:tag="peace3" />
+            <ImageView
+                android:id="@+id/peaces"
+                android:layout_width="79dp"
+                android:layout_height="81dp"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentBottom="false"
+                android:src="@drawable/efi_peace1"
+                android:tag="peace1" />
 
-        <ImageView
-            android:id="@+id/peaces4"
-            android:layout_width="98dp"
-            android:layout_height="60dp"
-            android:layout_alignParentEnd="false"
-            android:layout_alignParentBottom="false"
-            android:src="@drawable/efi_peace_4"
-            android:tag="peace4" />
+            <ImageView
+                android:id="@+id/peaces2"
+                android:layout_width="125dp"
+                android:layout_height="62dp"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentBottom="false"
+                android:src="@drawable/efi_peace_2"
+                android:tag="peace2" />
 
-        <ImageView
-            android:id="@+id/peaces5"
-            android:layout_width="99dp"
-            android:layout_height="81dp"
-            android:layout_alignParentEnd="false"
-            android:layout_alignParentBottom="false"
-            android:src="@drawable/efi_peace_5"
-            android:tag="peace5" />
+            <ImageView
+                android:id="@+id/peaces3"
+                android:layout_width="76dp"
+                android:layout_height="78dp"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentBottom="false"
+                android:src="@drawable/efi_peace_3"
+                android:tag="peace3" />
 
-        <ImageView
-            android:id="@+id/peaces6"
-            android:layout_width="78dp"
-            android:layout_height="79dp"
-            android:layout_alignParentEnd="false"
-            android:layout_alignParentBottom="false"
-            android:src="@drawable/efi_peace_6"
-            android:tag="peace6" />
+            <ImageView
+                android:id="@+id/peaces4"
+                android:layout_width="98dp"
+                android:layout_height="60dp"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentBottom="false"
+                android:src="@drawable/efi_peace_4"
+                android:tag="peace4" />
 
-    </RelativeLayout>
+            <ImageView
+                android:id="@+id/peaces5"
+                android:layout_width="99dp"
+                android:layout_height="81dp"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentBottom="false"
+                android:src="@drawable/efi_peace_5"
+                android:tag="peace5" />
+
+            <ImageView
+                android:id="@+id/peaces6"
+                android:layout_width="78dp"
+                android:layout_height="79dp"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentBottom="false"
+                android:src="@drawable/efi_peace_6"
+                android:tag="peace6" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

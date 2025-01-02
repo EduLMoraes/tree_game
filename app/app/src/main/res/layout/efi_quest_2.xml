@@ -15,7 +15,7 @@
             android:id="@+id/description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="É muito importante ter árvores plantadas na nossa cidade, porque elas limpam o nosso ar e produzem sombra, que reduz a sensação de calor. Abaixo, você tem as seis letras que formam a palavra árvore na tela, ordene as letras corretamente no retângulo abaixo:"
+            android:text="As árvores são divididas em partes. O tronco possibilita a sua fixação no solo. As folhas produzem o seu alimento por meio da fotossíntese. O fruto protege a semente e serve de alimento para animais. Agora clique com o dedo na parte da árvore e no seu nome correspondente:"
             android:textAlignment="textStart"
             android:textSize="16sp" />
 
@@ -81,7 +81,7 @@
                     app:srcCompat="@drawable/retangulo" />
 
                 <ImageView
-                    android:id="@+id/rectangle3"
+                    android:id="@+id/a1"
                     android:layout_width="265dp"
                     android:layout_height="50dp"
                     android:layout_above="@+id/rectangle2"
@@ -96,8 +96,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignTop="@+id/square1"
-                    android:layout_alignEnd="@+id/rectangle3"
-                    android:layout_alignBottom="@+id/rectangle3"
+                    android:layout_alignEnd="@+id/a1"
+                    android:layout_alignBottom="@+id/a1"
                     android:layout_marginTop="-11dp"
                     android:layout_marginEnd="38dp"
                     android:layout_marginBottom="-3dp"

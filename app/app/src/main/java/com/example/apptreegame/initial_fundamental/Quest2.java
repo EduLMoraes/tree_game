@@ -20,7 +20,7 @@ public class Quest2 implements QuestController {
     public void initialize(View rootView, TemplateQuest root) {
         TextView text;
         ImageView[] rectangles = {
-                rootView.findViewById(R.id.rectangle3),
+                rootView.findViewById(R.id.a1),
                 rootView.findViewById(R.id.rectangle2),
                 rootView.findViewById(R.id.rectangle)
         };
