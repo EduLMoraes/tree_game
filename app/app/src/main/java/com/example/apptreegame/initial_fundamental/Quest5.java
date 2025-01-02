@@ -97,7 +97,6 @@ public class Quest5 implements QuestController {
             if (!pos)
                 return false;
         }
-
         return true;
     }
 

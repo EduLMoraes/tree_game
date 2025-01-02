@@ -23,7 +23,155 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="O tatu, a capivara e o veado são espécies encontradas no nosso Bioma Pampa. As três espécies são herbívoras, ou seja, alimentam-se de vegetais. Coloque o nome correto no retângulo acima de cada animal:"
-            android:textSize="16sp" />
+            android:textSize="12sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|center_vertical">
+
+            <ImageView
+                android:id="@+id/a1"
+                android:layout_width="190dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/retangulo" />
+
+            <ImageView
+                android:id="@+id/a2"
+                android:layout_width="190dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/a1"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/retangulo" />
+
+            <ImageView
+                android:id="@+id/a3"
+                android:layout_width="190dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@id/a2"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/retangulo" />
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="190dp"
+                android:layout_height="110dp"
+                android:layout_below="@id/a1"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/iniciais_questao11a" />
+
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="190dp"
+                android:layout_height="110dp"
+                android:layout_below="@id/a1"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/image"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/iniciais_questao11b" />
+
+            <ImageView
+                android:id="@+id/image3"
+                android:layout_width="190dp"
+                android:layout_height="110dp"
+                android:layout_below="@id/a1"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/image2"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/iniciais_questao11" />
+
+            <ImageView
+                android:id="@+id/a4"
+                android:layout_width="185dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/image"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/retangulo" />
+
+            <ImageView
+                android:id="@+id/a5"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/image"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/a4"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/retangulo" />
+
+            <ImageView
+                android:id="@+id/a6"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/image"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/a5"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/retangulo" />
+
+            <TextView
+                android:id="@+id/ta1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/a5"
+                android:layout_alignBottom="@+id/a5"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="4dp"
+                android:text="TATU"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/ta2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/a6"
+                android:layout_alignBottom="@+id/a6"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="4dp"
+                android:text="VEADO"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/ta3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/a4"
+                android:layout_alignBottom="@+id/a4"
+                android:layout_marginEnd="9dp"
+                android:layout_marginBottom="0dp"
+                android:text="CAPIVARA"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+        </RelativeLayout>
 
     </LinearLayout>
 
