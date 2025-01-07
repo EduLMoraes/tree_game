@@ -16,7 +16,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="79dp">
 
         <TextView
             android:id="@+id/description"
@@ -24,6 +26,11 @@
             android:layout_height="wrap_content"
             android:text="A capivara é um animal nativo do Bioma Pampa, sendo muito importante a sua preservação. Arraste o dedo na tela e ajude a capivara a cruzar o labirinto para chegar até o capim, que servirá de seu alimento:"
             android:textSize="16sp" />
+
+        <com.example.apptreegame.initial_fundamental.Quest6
+            android:id="@+id/quest6_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 

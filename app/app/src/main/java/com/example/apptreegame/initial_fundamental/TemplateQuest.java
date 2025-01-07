@@ -1,5 +1,6 @@
 package com.example.apptreegame.initial_fundamental;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +20,7 @@ public class TemplateQuest extends AppCompatActivity {
         setContentView(R.layout.activity_template_quest);
         View include = findViewById(R.id.quest);
 
-        replaceInclude(R.layout.efi_quest_5, new Quest5());
+        replaceInclude(R.layout.efi_quest_6, new Quest6(this));
     }
 
     public void replaceInclude(int newLayoutResId, QuestController controller) {

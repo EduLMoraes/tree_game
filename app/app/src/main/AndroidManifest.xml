@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppTreeGame"
         tools:targetApi="31">
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -29,7 +30,7 @@
             android:exported="true"
             android:resizeableActivity="true"></activity>
         <activity
-            android:name=".QuestPuzzles"
+            android:name=".childish.Quest1"
             android:exported="true"
             android:resizeableActivity="true"></activity>
         <activity
@@ -54,7 +55,50 @@
             android:name=".initial_fundamental.Quest4"
             android:exported="true"
             android:resizeableActivity="true">
+        </activity>
+        <activity
+            android:name=".initial_fundamental.Quest5"
+            android:exported="true"
+            android:resizeableActivity="true">
+        </activity>
 
+        <activity
+            android:name=".initial_fundamental.Quest6"
+            android:exported="true"
+            android:resizeableActivity="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </activity>
+        <activity
+            android:name=".initial_fundamental.Quest7"
+            android:exported="true"
+            android:resizeableActivity="true">
+        </activity>
+        <activity
+            android:name=".initial_fundamental.Quest8"
+            android:exported="true"
+            android:resizeableActivity="true">
+        </activity>
+        <activity
+            android:name=".initial_fundamental.Quest9"
+            android:exported="true"
+            android:resizeableActivity="true">
+        </activity>
+        <activity
+            android:name=".initial_fundamental.Quest10"
+            android:exported="true"
+            android:resizeableActivity="true">
+        </activity>
+        <activity
+            android:name=".initial_fundamental.Quest11"
+            android:exported="true"
+            android:resizeableActivity="true">
+        </activity>
+        <activity
+            android:name=".initial_fundamental.Quest12"
+            android:exported="true"
+            android:resizeableActivity="true">
         </activity>
         <activity
             android:name=".initial_fundamental.TemplateQuest"
@@ -64,7 +108,6 @@
             android:theme="@style/Theme.AppTreeGame.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
