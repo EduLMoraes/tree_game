@@ -115,9 +115,6 @@ public class Quest4 implements QuestController {
                 return false;
             }
         }
-
-        System.out.println("Todas corretas");
-
         return true;
     }
 
