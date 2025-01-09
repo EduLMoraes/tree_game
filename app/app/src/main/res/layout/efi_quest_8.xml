@@ -2,16 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/quest"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <ImageView
-        android:id="@+id/verso"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/iniciais_questao3_verso"
-        android:visibility="invisible"
-        tools:layout_editor_absoluteY="360dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,6 +17,124 @@
             android:layout_height="wrap_content"
             android:text="As árvores podem ter vários formatos e alturas. Encaixe a árvore na sua sombra correspondente, ao arrastá-la com o dedo:"
             android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|top">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="false"
+                android:layout_marginEnd="100dp"
+                android:layout_marginBottom="0dp"
+                app:srcCompat="@drawable/iniciais_questao8_sombra_3_3" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="false"
+                android:layout_marginEnd="400dp"
+                android:layout_marginBottom="0dp"
+                app:srcCompat="@drawable/iniciais_questao8c" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="false"
+                android:layout_marginEnd="300dp"
+                android:layout_marginBottom="0dp"
+                app:srcCompat="@drawable/iniciais_questao8_sombra_1_1" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="false"
+                android:layout_marginEnd="200dp"
+                android:layout_marginBottom="0dp"
+                app:srcCompat="@drawable/iniciais_questao8_sombra_2_2" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="false"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                app:srcCompat="@drawable/iniciais_questao8_sombra_4_4" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/imageView10"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="400dp"
+                android:layout_marginBottom="0dp"
+                app:srcCompat="@drawable/iniciais_questao8b" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/imageView4"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="300dp"
+                android:layout_marginBottom="0dp"
+                app:srcCompat="@drawable/iniciais_questao8d" />
+
+            <ImageView
+                android:id="@+id/theCorrect"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/imageView5"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="200dp"
+                app:srcCompat="@drawable/iniciais_questao8a" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/imageView6"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="100dp"
+                app:srcCompat="@drawable/iniciais_questao8e" />
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/imageView7"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                app:srcCompat="@drawable/iniciais_questao8f" />
+
+            <ImageView
+                android:id="@+id/treeMovel"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="536dp"
+                app:srcCompat="@drawable/iniciais_questao8" />
+
+        </RelativeLayout>
 
     </LinearLayout>
 

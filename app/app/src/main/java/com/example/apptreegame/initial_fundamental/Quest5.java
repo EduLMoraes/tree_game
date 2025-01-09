@@ -1,15 +1,14 @@
 package com.example.apptreegame.initial_fundamental;
 import android.annotation.SuppressLint;
-import android.graphics.Color;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+import androidx.appcompat.app.AppCompatActivity;
 import com.example.apptreegame.QuestController;
 import com.example.apptreegame.R;
 
-public class Quest5 implements QuestController {
+public class Quest5 extends AppCompatActivity implements QuestController  {
     float dX, dY = 0.0f;
     boolean[] order = {
             false, false,
@@ -21,7 +20,7 @@ public class Quest5 implements QuestController {
     @Override
     public void initialize(View rootView, TemplateQuest root) {
         ImageView[] rectangles = {
-                rootView.findViewById(R.id.a1),
+                rootView.findViewById(R.id.r1),
                 rootView.findViewById(R.id.a2),
                 rootView.findViewById(R.id.b1),
                 rootView.findViewById(R.id.b2),
@@ -83,9 +82,7 @@ public class Quest5 implements QuestController {
                 }
 
                 if (valid_position()) {
-//                    rootView.findViewById(R.id.quest).setBackgroundColor(Color.rgb(50, 255, 50));
-
-                    root.replaceInclude(R.layout.efi_quest_4, new Quest4());
+                    root.replaceInclude(R.layout.efi_quest_7, new Quest7());
                 }
                 return true;
             });

@@ -16,23 +16,34 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:resizeableActivity="true"></activity>
+            android:resizeableActivity="true" />
         <activity
             android:name=".RegisterActivity"
             android:exported="true"
-            android:resizeableActivity="true"></activity>
+            android:resizeableActivity="true" />
         <activity
             android:name=".QuestActivity"
             android:exported="true"
-            android:resizeableActivity="true"></activity>
+            android:resizeableActivity="true" />
         <activity
             android:name=".CodeActivity"
             android:exported="true"
-            android:resizeableActivity="true"></activity>
+            android:resizeableActivity="true" />
+        <activity
+            android:name=".initial_fundamental.TemplateQuest"
+            android:exported="true"
+            android:label="@string/title_activity_template_quest"
+            android:resizeableActivity="true"
+            android:theme="@style/Theme.AppTreeGame.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".childish.Quest1"
             android:exported="true"
-            android:resizeableActivity="true"></activity>
+            android:resizeableActivity="true" />
         <activity
             android:name=".initial_fundamental.Quest1"
             android:exported="true"
@@ -100,17 +111,7 @@
             android:exported="true"
             android:resizeableActivity="true">
         </activity>
-        <activity
-            android:name=".initial_fundamental.TemplateQuest"
-            android:exported="true"
-            android:label="@string/title_activity_template_quest"
-            android:resizeableActivity="true"
-            android:theme="@style/Theme.AppTreeGame.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+
 
     </application>
 

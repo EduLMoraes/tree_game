@@ -79,7 +79,7 @@ public class Quest4 implements QuestController {
                     }
 
                     if(isCorrect()){
-                        root.findViewById(R.id.questPuzzles).setBackgroundColor(Color.rgb(50, 255, 50));
+                        root.replaceInclude(R.layout.efi_quest_5, new Quest5());
                     };
                 }
 

@@ -15,7 +15,7 @@ public class Quest11 implements QuestController {
     @Override
     public void initialize(View rootView, TemplateQuest root) {
         ImageView[] rectangles = {
-                rootView.findViewById(R.id.a1),
+                rootView.findViewById(R.id.r1),
                 rootView.findViewById(R.id.a2),
                 rootView.findViewById(R.id.a3),
         };

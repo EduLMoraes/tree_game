@@ -20,9 +20,9 @@ public class Quest2 implements QuestController {
     public void initialize(View rootView, TemplateQuest root) {
         TextView text;
         ImageView[] rectangles = {
-                rootView.findViewById(R.id.a1),
-                rootView.findViewById(R.id.rectangle2),
-                rootView.findViewById(R.id.rectangle)
+                rootView.findViewById(R.id.r1),
+                rootView.findViewById(R.id.r2),
+                rootView.findViewById(R.id.r3)
         };
         TextView[] words = {
                 rootView.findViewById(R.id.folha),
@@ -45,10 +45,6 @@ public class Quest2 implements QuestController {
                                 .setDuration(0)
                                 .start();
 
-                        System.out.print(" " + (words[2].getY() - words[2].getHeight()));
-                        System.out.print(" x " + rectangles[0].getHeight());
-                        System.out.print(" " + (rectangles[0].getY() - rectangles[0].getHeight()) + "\n");
-
                         // folha
                         if (((int) words[0].getX() > (int) rectangles[1].getX() && words[0].getX() < (rectangles[1].getWidth() - rectangles[1].getX()))
                                 && ((int) words[0].getY() > (int) rectangles[1].getHeight() && words[0].getY() < (rectangles[1].getY()))){
@@ -69,7 +65,7 @@ public class Quest2 implements QuestController {
 
                         // fruto
                         if (((int) words[2].getX() > (int) rectangles[0].getX() && words[2].getX() < (rectangles[0].getWidth() - rectangles[0].getX()))
-                            && ((int) words[2].getY() < (int) (rectangles[0].getHeight() - 50) && words[2].getY() > 0f)){
+                            && ((int) words[2].getY() < (int) (rectangles[0].getHeight() - rectangles[0].getY()) && words[2].getY() > 0f)){
                             order[2] = true;
                             System.out.println('c');
                         }else {
@@ -88,8 +84,6 @@ public class Quest2 implements QuestController {
                     for (TextView letter2 : words){
                         letter2.setOnTouchListener((v, e) -> { return true; });
                     }
-                    rootView.findViewById(R.id.quest).setBackgroundColor(Color.rgb(50, 255, 50));
-
                     root.replaceInclude(R.layout.efi_quest_3, new Quest3());
                 }
                 return true;

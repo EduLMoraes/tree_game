@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/questPuzzles"
+    android:id="@+id/quest"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/material_dynamic_neutral30">
@@ -50,11 +50,10 @@
                 android:id="@+id/sombra9"
                 android:layout_width="99dp"
                 android:layout_height="61dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="false"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="150dp"
-                android:layout_marginBottom="80dp"
+                android:layout_marginEnd="-24dp"
+                android:layout_marginBottom="0dp"
+                android:layout_toStartOf="@+id/sombra10"
                 android:src="@drawable/sombra9"
                 android:tag="peace9" />
 
@@ -65,7 +64,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginEnd="337dp"
-                android:layout_marginBottom="80dp"
+                android:layout_marginBottom="0dp"
                 android:src="@drawable/sombra10"
                 android:tag="peace10" />
 
@@ -76,7 +75,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginEnd="242dp"
-                android:layout_marginBottom="79dp"
+                android:layout_marginBottom="0dp"
                 android:src="@drawable/sombra11"
                 android:tag="peace11" />
 
@@ -87,7 +86,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginEnd="188dp"
-                android:layout_marginBottom="79dp"
+                android:layout_marginBottom="0dp"
                 android:src="@drawable/sombra12"
                 android:tag="peace12" />
 
@@ -96,12 +95,10 @@
                 android:layout_width="79dp"
                 android:layout_height="81dp"
                 android:layout_above="@+id/sombra5"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="false"
-                android:layout_alignParentEnd="false"
-                android:layout_marginStart="150dp"
-                android:layout_marginTop="95dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="-25dp"
                 android:layout_marginBottom="-19dp"
+                android:layout_toStartOf="@+id/sombra2"
                 android:src="@drawable/sombra1"
                 android:tag="peace1" />
 
@@ -110,9 +107,8 @@
                 android:layout_width="125dp"
                 android:layout_height="62dp"
                 android:layout_above="@+id/sombra6"
-                android:layout_alignParentTop="false"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="97dp"
+                android:layout_marginTop="0dp"
                 android:layout_marginEnd="311dp"
                 android:layout_marginBottom="-18dp"
                 android:src="@drawable/sombra2"
@@ -123,9 +119,8 @@
                 android:layout_width="76dp"
                 android:layout_height="78dp"
                 android:layout_above="@+id/sombra7"
-                android:layout_alignParentTop="false"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="99dp"
+                android:layout_marginTop="0dp"
                 android:layout_marginEnd="262dp"
                 android:layout_marginBottom="-18dp"
                 android:src="@drawable/sombra3"
@@ -136,9 +131,8 @@
                 android:layout_width="98dp"
                 android:layout_height="60dp"
                 android:layout_above="@+id/sombra8"
-                android:layout_alignParentTop="false"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="98dp"
+                android:layout_marginTop="0dp"
                 android:layout_marginEnd="188dp"
                 android:layout_marginBottom="-18dp"
                 android:src="@drawable/sombra4"
@@ -148,12 +142,10 @@
                 android:id="@+id/sombra5"
                 android:layout_width="99dp"
                 android:layout_height="81dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="150dp"
-                android:layout_marginEnd="390dp"
-                android:layout_marginBottom="122dp"
+                android:layout_above="@+id/sombra9"
+                android:layout_marginEnd="-25dp"
+                android:layout_marginBottom="-19dp"
+                android:layout_toStartOf="@+id/sombra6"
                 android:src="@drawable/sombra5"
                 android:tag="peace5" />
 
@@ -161,10 +153,10 @@
                 android:id="@+id/sombra6"
                 android:layout_width="78dp"
                 android:layout_height="79dp"
+                android:layout_above="@+id/sombra10"
                 android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="337dp"
-                android:layout_marginBottom="140dp"
+                android:layout_marginEnd="338dp"
+                android:layout_marginBottom="-19dp"
                 android:src="@drawable/sombra6"
                 android:tag="peace6" />
 

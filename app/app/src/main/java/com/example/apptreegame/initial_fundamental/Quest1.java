@@ -71,9 +71,6 @@ public class Quest1 implements QuestController {
                     for (TextView letter2 : letters){
                         letter2.setOnTouchListener((v, e) -> { return true; });
                     }
-
-                    rootView.findViewById(R.id.quest).setBackgroundColor(Color.rgb(50, 255, 50));
-
                     root.replaceInclude(R.layout.efi_quest_2, new Quest2());
                 }
 

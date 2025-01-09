@@ -122,9 +122,7 @@ public class Quest6 extends View implements QuestController {
     }
 
     private void win(){
-        rootView.findViewById(R.id.quest).setBackgroundColor(Color.rgb(50, 255, 50));
-
-        root.replaceInclude(R.layout.efi_quest_2, new Quest2());
+        root.replaceInclude(R.layout.efi_quest_7, new Quest7());
     }
 
     @SuppressLint("WrongCall")

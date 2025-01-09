@@ -6,7 +6,7 @@
     android:backgroundTint="@color/material_dynamic_neutral_variant30">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/questPuzzles"
+        android:id="@+id/quest"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/material_dynamic_neutral30"

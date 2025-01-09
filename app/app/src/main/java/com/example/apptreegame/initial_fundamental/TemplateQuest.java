@@ -20,12 +20,11 @@ public class TemplateQuest extends AppCompatActivity {
         setContentView(R.layout.activity_template_quest);
         View include = findViewById(R.id.quest);
 
-        replaceInclude(R.layout.efi_quest_6, new Quest6(this));
+        replaceInclude(R.layout.efi_quest_7, new Quest7());
     }
 
     public void replaceInclude(int newLayoutResId, QuestController controller) {
         View includeView = findViewById(R.id.quest);
-        System.out.println(includeView);
         if (includeView != null) {
             ViewGroup parent = (ViewGroup) includeView.getParent();
             int index = parent.indexOfChild(includeView);
@@ -33,8 +32,6 @@ public class TemplateQuest extends AppCompatActivity {
 
             View newView = getLayoutInflater().inflate(newLayoutResId, parent, false);
             parent.addView(newView, index);
-
-            System.out.println(this);
 
             currentController = controller;
             currentController.initialize(newView, this);
