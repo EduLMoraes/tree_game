@@ -20,15 +20,15 @@ public class Quest5 extends AppCompatActivity implements QuestController  {
     @Override
     public void initialize(View rootView, TemplateQuest root) {
         ImageView[] rectangles = {
-                rootView.findViewById(R.id.r1),
-                rootView.findViewById(R.id.a2),
-                rootView.findViewById(R.id.b1),
-                rootView.findViewById(R.id.b2),
-                rootView.findViewById(R.id.b3),
-                rootView.findViewById(R.id.c1),
-                rootView.findViewById(R.id.c2),
-                rootView.findViewById(R.id.c3),
-                rootView.findViewById(R.id.c4)
+            rootView.findViewById(R.id.r1),
+            rootView.findViewById(R.id.a2),
+            rootView.findViewById(R.id.b1),
+            rootView.findViewById(R.id.b2),
+            rootView.findViewById(R.id.b3),
+            rootView.findViewById(R.id.c1),
+            rootView.findViewById(R.id.c2),
+            rootView.findViewById(R.id.c3),
+            rootView.findViewById(R.id.c4)
         };
         TextView[] words = {
             rootView.findViewById(R.id.ta1),
@@ -74,16 +74,17 @@ public class Quest5 extends AppCompatActivity implements QuestController  {
                             order[finalI] = (wlx < rlx && wix > rix) && (wly < rly && wiy > riy);
                         }else
                             words[finalI].setOnTouchListener((v, e) -> true);
-
+                            if (valid_position()) {
+                                System.out.println("ok");
+                                root.replaceInclude(R.layout.efi_quest_7, new Quest7());
+                            }
                         break;
 
                     default:
                         return false;
                 }
 
-                if (valid_position()) {
-                    root.replaceInclude(R.layout.efi_quest_7, new Quest7());
-                }
+
                 return true;
             });
         }
@@ -91,6 +92,7 @@ public class Quest5 extends AppCompatActivity implements QuestController  {
 
     private boolean valid_position(){
         for (boolean pos: order ) {
+            System.out.println(pos);
             if (!pos)
                 return false;
         }

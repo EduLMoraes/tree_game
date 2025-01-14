@@ -37,12 +37,11 @@ public class Quest8 implements QuestController {
                         break;
             }
 
-            System.out.println(posi.getX() + " " + " " + tree.getX() +" " + posi.getY() + " " + " " + tree.getY());
             if((int) Math.abs(posi.getX() - tree.getX()) <= 10 && (int) Math.abs(posi.getY() - tree.getY()) <= 10){
                 tree.setOnTouchListener((vi, ev) -> true);
                 tree.setX(posi.getX());
                 tree.setY(posi.getY());
-                root.replaceInclude(R.layout.efi_quest_9, new Quest9());
+                root.replaceInclude(R.layout.efi_quest_10, new Quest10());
             }
             return true;
         });

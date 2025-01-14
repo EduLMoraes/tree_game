@@ -1,7 +1,6 @@
 package com.example.apptreegame.initial_fundamental;
 
 import android.annotation.SuppressLint;
-import android.graphics.Color;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
@@ -28,6 +27,7 @@ public class Quest1 implements QuestController {
                 rootView.findViewById(R.id.r2),
                 rootView.findViewById(R.id.folha)
         };
+
 
         for (TextView letter : letters)
             letter.setOnTouchListener((view, event) -> {

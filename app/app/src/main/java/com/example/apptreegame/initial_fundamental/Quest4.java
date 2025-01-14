@@ -55,8 +55,8 @@ public class Quest4 implements QuestController {
 
         Random rand = new Random();
         for (ImageView peace: peaces) {
-            peace.setX(rand.nextInt(350));
-            peace.setY(rand.nextInt(400));
+            peace.setX(rand.nextInt(250));
+            peace.setY(rand.nextInt(200));
         }
 
 //        peaces[3].setScaleX(peaces[2].getScaleX() + 0.2f);

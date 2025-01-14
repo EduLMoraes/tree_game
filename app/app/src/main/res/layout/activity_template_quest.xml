@@ -50,7 +50,7 @@ across the layout configurations
                         android:layout_weight="1"
                         android:background="#FFFFFF"
                         android:backgroundTint="@android:color/holo_green_light"
-                        android:text="15"
+                        android:text="1"
                         android:textColor="#3E3E3E"
                         android:textSize="34sp"
                         android:textStyle="bold"
