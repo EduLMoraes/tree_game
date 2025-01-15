@@ -79,7 +79,7 @@ public class Quest4 implements QuestController {
                     }
 
                     if(isCorrect()){
-                        root.replaceInclude(R.layout.efi_quest_5, new Quest5());
+                        root.replaceInclude(R.layout.efi_quest_5, new Quest5(), R.raw.questao_efi_5);
                     };
                 }
 

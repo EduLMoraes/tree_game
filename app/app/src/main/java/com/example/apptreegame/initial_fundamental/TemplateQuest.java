@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
+import android.media.MediaPlayer;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.apptreegame.QuestController;
@@ -14,21 +14,22 @@ import com.example.apptreegame.R;
 
 public class TemplateQuest extends AppCompatActivity {
     private QuestController currentController;
-    public static int COUNTQUEST = 0;
+    public static int COUNTQUEST = 6;
+    private MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_template_quest);
 
-        replaceInclude(R.layout.efi_quest_1, new Quest1());
+        replaceInclude(R.layout.efi_quest_1, new Quest1(), R.raw.questao_efi_1);
     }
 
     public static void sumCount(){
         COUNTQUEST++;
     }
 
-    public void replaceInclude(int newLayoutResId, QuestController controller) {
+    public void replaceInclude(int newLayoutResId, QuestController controller, int mp) {
         View includeView = findViewById(R.id.quest);
 
         if (includeView != null) {
@@ -42,6 +43,12 @@ public class TemplateQuest extends AppCompatActivity {
             TextView a = findViewById(R.id.nQuest);
             sumCount();
             a.setText("" + COUNTQUEST);
+
+            if(mediaPlayer != null && mediaPlayer.isPlaying()){
+               mediaPlayer.stop();
+            }
+            mediaPlayer = MediaPlayer.create(this, mp);
+            mediaPlayer.start();
 
             currentController = controller;
             currentController.initialize(newView, this);

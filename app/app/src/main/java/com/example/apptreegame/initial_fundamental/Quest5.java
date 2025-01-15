@@ -76,7 +76,7 @@ public class Quest5 extends AppCompatActivity implements QuestController  {
                             words[finalI].setOnTouchListener((v, e) -> true);
                             if (valid_position()) {
                                 System.out.println("ok");
-                                root.replaceInclude(R.layout.efi_quest_7, new Quest7());
+                                root.replaceInclude(R.layout.efi_quest_7, new Quest7(), R.raw.questao_efi_7);
                             }
                         break;
 

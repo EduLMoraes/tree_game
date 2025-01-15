@@ -67,7 +67,7 @@ public class Quest11 implements QuestController {
                 if (valid_position()) {
 //                    rootView.findViewById(R.id.quest).setBackgroundColor(Color.rgb(50, 255, 50));
 
-                    root.replaceInclude(R.layout.efi_quest_4, new Quest4());
+                    root.replaceInclude(R.layout.efi_quest_12, new Quest12(), R.raw.questao_efi_12);
                 }
                 return true;
             });

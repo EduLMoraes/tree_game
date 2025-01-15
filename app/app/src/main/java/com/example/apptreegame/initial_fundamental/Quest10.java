@@ -36,7 +36,7 @@ public class Quest10 implements QuestController {
                 }
 
                 if(all_invisible){
-                    root.replaceInclude(R.layout.efi_quest_11, new Quest11());
+                    root.replaceInclude(R.layout.efi_quest_11, new Quest11(), R.raw.questao_efi_11);
                 }
             });
         }

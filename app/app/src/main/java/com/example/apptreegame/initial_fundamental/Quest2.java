@@ -84,7 +84,7 @@ public class Quest2 implements QuestController {
                     for (TextView letter2 : words){
                         letter2.setOnTouchListener((v, e) -> { return true; });
                     }
-                    root.replaceInclude(R.layout.efi_quest_3, new Quest3());
+                    root.replaceInclude(R.layout.efi_quest_3, new Quest3(), R.raw.questao_efi_3);
                 }
                 return true;
             });

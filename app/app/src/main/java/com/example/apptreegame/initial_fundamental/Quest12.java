@@ -53,7 +53,7 @@ public class Quest12 implements QuestController {
                                 }
                             }
 
-                            root.replaceInclude(R.layout.efi_quest_1, new Quest1());
+                            root.replaceInclude(R.layout.efi_quest_1, new Quest1(), R.raw.questao_efi_1);
                         }
                         break;
                     default:

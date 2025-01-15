@@ -82,7 +82,7 @@ public class Quest3 implements QuestController {
                 }
 
                 if(isFinish(figs)){
-                    root.replaceInclude(R.layout.efi_quest_4, new Quest4());
+                    root.replaceInclude(R.layout.efi_quest_4, new Quest4(), R.raw.questao_efi_4);
                 }
 
             });

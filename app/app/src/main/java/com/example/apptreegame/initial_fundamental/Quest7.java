@@ -33,7 +33,7 @@ public class Quest7 implements QuestController {
                 countErrors += 1;
                 System.out.println(countErrors);
                 if(countErrors >= 7){
-                    root.replaceInclude(R.layout.efi_quest_8, new Quest8());
+                    root.replaceInclude(R.layout.efi_quest_8, new Quest8(), R.raw.questao_efi_8);
                 }
             });
         }

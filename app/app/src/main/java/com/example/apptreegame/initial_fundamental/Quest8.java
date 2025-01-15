@@ -41,7 +41,7 @@ public class Quest8 implements QuestController {
                 tree.setOnTouchListener((vi, ev) -> true);
                 tree.setX(posi.getX());
                 tree.setY(posi.getY());
-                root.replaceInclude(R.layout.efi_quest_10, new Quest10());
+                root.replaceInclude(R.layout.efi_quest_10, new Quest10(), R.raw.questao_efi_9);
             }
             return true;
         });

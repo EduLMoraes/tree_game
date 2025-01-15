@@ -122,7 +122,7 @@ public class Quest6 extends View implements QuestController {
     }
 
     private void win(){
-        root.replaceInclude(R.layout.efi_quest_7, new Quest7());
+        root.replaceInclude(R.layout.efi_quest_7, new Quest7(), R.raw.questao_efi_7);
     }
 
     @SuppressLint("WrongCall")
