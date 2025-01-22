@@ -1,14 +1,11 @@
 package com.example.apptreegame.initial_fundamental;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.apptreegame.QuestController;
 import com.example.apptreegame.R;
-
-import java.util.Random;
+import com.example.apptreegame.TemplateQuest;
 
 public class Quest7 implements QuestController {
     int countErrors = 0;

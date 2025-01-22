@@ -7,6 +7,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.apptreegame.QuestController;
 import com.example.apptreegame.R;
+import com.example.apptreegame.TemplateQuest;
 
 public class Quest5 extends AppCompatActivity implements QuestController  {
     float dX, dY = 0.0f;

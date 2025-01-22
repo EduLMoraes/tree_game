@@ -1,7 +1,6 @@
 package com.example.apptreegame.initial_fundamental;
 
 import android.annotation.SuppressLint;
-import android.graphics.Color;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
@@ -9,6 +8,7 @@ import android.widget.TextView;
 
 import com.example.apptreegame.QuestController;
 import com.example.apptreegame.R;
+import com.example.apptreegame.TemplateQuest;
 
 public class Quest2 implements QuestController {
     public static boolean isCorrect = false;

@@ -7,7 +7,7 @@ import android.widget.ImageView;
 
 import com.example.apptreegame.QuestController;
 import com.example.apptreegame.R;
-import com.example.apptreegame.initial_fundamental.TemplateQuest;
+import com.example.apptreegame.TemplateQuest;
 
 import java.util.Random;
 
@@ -131,6 +131,8 @@ public class Quest1 implements QuestController {
                                         return false;
                                     });
                                 }
+
+                                root.replaceInclude(R.layout.ei_quest_2, new Quest2(), R.raw.questao_ei_2);
                             }
                         }
 

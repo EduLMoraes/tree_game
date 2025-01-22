@@ -4,15 +4,13 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
 import com.example.apptreegame.QuestController;
 import com.example.apptreegame.R;
+import com.example.apptreegame.TemplateQuest;
 
 public class Quest6 extends View implements QuestController {
 

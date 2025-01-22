@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import com.example.apptreegame.QuestController;
 import com.example.apptreegame.R;
+import com.example.apptreegame.TemplateQuest;
 
 public class Quest11 implements QuestController {
     float dX, dY = 0.0f;

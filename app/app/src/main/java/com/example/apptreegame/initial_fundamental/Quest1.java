@@ -1,15 +1,14 @@
 package com.example.apptreegame.initial_fundamental;
 
 import android.annotation.SuppressLint;
-import android.media.MediaPlayer;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.media.MediaPlayer;
 
 import com.example.apptreegame.QuestController;
 import com.example.apptreegame.R;
+import com.example.apptreegame.TemplateQuest;
 
 public class Quest1 implements QuestController {
     public static boolean isCorrect = false;

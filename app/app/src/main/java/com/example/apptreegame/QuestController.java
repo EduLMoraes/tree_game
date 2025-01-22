@@ -1,9 +1,6 @@
 package com.example.apptreegame;
 
-import android.media.MediaPlayer;
 import android.view.View;
-
-import com.example.apptreegame.initial_fundamental.TemplateQuest;
 
 public interface QuestController {
 
