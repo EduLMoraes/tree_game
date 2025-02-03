@@ -32,7 +32,7 @@ public class Quest2 implements QuestController {
         }
 
         images[0].setOnClickListener((v)->{
-            root.replaceInclude(R.layout.ei_quest_1, new Quest1(), R.raw.questao_ei_1);
+            root.replaceInclude(R.layout.ei_quest_3, new Quest3(), R.raw.questao_ei_3);
         });
 
     }
