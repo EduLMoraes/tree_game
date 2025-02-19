@@ -23,7 +23,7 @@ public class TemplateQuest extends AppCompatActivity {
         setContentView(R.layout.activity_template_quest);
 
         if (this.levelShooling == LevelSchooling.childish)
-            replaceInclude(R.layout.ei_quest_4, new com.example.apptreegame.childish.Quest4(), R.raw.questao_ei_4);
+            replaceInclude(R.layout.ei_quest_5, new com.example.apptreegame.childish.Quest5(), R.raw.questao_ei_5);
         else if(this.levelShooling == LevelSchooling.initial_fundamental)
             replaceInclude(R.layout.efi_quest_1, new com.example.apptreegame.initial_fundamental.Quest1(), R.raw.questao_efi_1);
         else if(this.levelShooling == LevelSchooling.other)
