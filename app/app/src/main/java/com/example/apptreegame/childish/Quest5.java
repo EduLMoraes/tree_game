@@ -140,7 +140,7 @@ public class Quest5 implements QuestController {
                             view.setOnTouchListener((v, e) -> true);
                             fruits++;
                             if(fruits >= 9){
-                                root.replaceInclude(R.layout.ei_quest_1, new Quest1(), R.raw.questao_ei_1);
+                                root.replaceInclude(R.layout.ei_quest_6, new Quest6(), R.raw.questao_ei_6);
                             }
                         }
                         break;
