@@ -38,32 +38,32 @@ public class QuestActivity implements QuestController{
 
         for(int i = 0; i<options.length; i++){
             options[i].setOnClickListener(new View.OnClickListener(){
-                                              @Override
-                                              public void onClick(View view) {
-                                                  LinearLayout backgroundOptions = rootView.findViewById(R.id.optionsLayout);
-                                                  boolean isCorrect = false;
+              @Override
+              public void onClick(View view) {
+                  LinearLayout backgroundOptions = rootView.findViewById(R.id.optionsLayout);
+                  boolean isCorrect = false;
 
-                                                  for(int j = 0; j<options.length; j++){
-                                                      options[j].setEnabled(false);
-                                                      if (options[j].isPressed() && options[j].getText().charAt(0) != response){
-                                                          options[j].setBackgroundColor(Color.rgb(255, 0, 0));
-                                                          backgroundOptions.setBackgroundColor(Color.rgb(255, 0, 0));
-                                                      }else if(!options[j].isPressed() && options[j].getText().charAt(0) == response){
-                                                          options[j].setBackgroundColor(Color.rgb(0, 255, 0));
-                                                      }else if(options[j].isPressed() && options[j].getText().charAt(0) == response){
-                                                          options[j].setBackgroundColor(Color.rgb(0, 255, 0));
-                                                          backgroundOptions.setBackgroundColor(Color.rgb(0, 255, 0));
-                                                          isCorrect = true;
-                                                      }else{
-                                                          options[j].setVisibility(View.INVISIBLE);
-                                                          options[j].setEnabled(false);
-                                                      }
-                                                  }
-                                                  if (isCorrect){
-                                                      System.out.println("is ok");
-                                                  }
-                                              }
-                                          }
+                  for(int j = 0; j<options.length; j++){
+                      options[j].setEnabled(false);
+                      if (options[j].isPressed() && options[j].getText().charAt(0) != response){
+                          options[j].setBackgroundColor(Color.rgb(255, 0, 0));
+                          backgroundOptions.setBackgroundColor(Color.rgb(255, 0, 0));
+                      }else if(!options[j].isPressed() && options[j].getText().charAt(0) == response){
+                          options[j].setBackgroundColor(Color.rgb(0, 255, 0));
+                      }else if(options[j].isPressed() && options[j].getText().charAt(0) == response){
+                          options[j].setBackgroundColor(Color.rgb(0, 255, 0));
+                          backgroundOptions.setBackgroundColor(Color.rgb(0, 255, 0));
+                          isCorrect = true;
+                      }else{
+                          options[j].setVisibility(View.INVISIBLE);
+                          options[j].setEnabled(false);
+                      }
+                  }
+                  if (isCorrect){
+                      System.out.println("is ok");
+                  }
+              }
+          }
             );
         }
 

@@ -31,7 +31,10 @@
         <activity
             android:name=".CodeActivity"
             android:exported="true"
-            android:resizeableActivity="true" />
+            android:resizeableActivity="true">
+
+        </activity>
+
         <activity
             android:name=".TemplateQuest"
             android:exported="true"

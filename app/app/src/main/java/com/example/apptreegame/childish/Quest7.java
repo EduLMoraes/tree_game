@@ -1,4 +1,4 @@
-package com.example.apptreegame.initial_fundamental;
+package com.example.apptreegame.childish;
 import android.graphics.Color;
 import android.view.View;
 import android.widget.TextView;
@@ -6,6 +6,7 @@ import android.widget.TextView;
 import com.example.apptreegame.QuestController;
 import com.example.apptreegame.R;
 import com.example.apptreegame.TemplateQuest;
+import com.example.apptreegame.initial_fundamental.Quest8;
 
 public class Quest7 implements QuestController {
     int countErrors = 0;
@@ -16,10 +17,7 @@ public class Quest7 implements QuestController {
                 rootView.findViewById(R.id.error01),
                 rootView.findViewById(R.id.error02),
                 rootView.findViewById(R.id.error03),
-                rootView.findViewById(R.id.error07),
                 rootView.findViewById(R.id.error04),
-                rootView.findViewById(R.id.error05),
-                rootView.findViewById(R.id.error06)
         };
 
         for(TextView e: errors){
@@ -29,14 +27,12 @@ public class Quest7 implements QuestController {
                 e.setOnClickListener((_v) -> {});
                 countErrors += 1;
                 System.out.println(countErrors);
-                if(countErrors >= 7){
-                    root.replaceInclude(R.layout.efi_quest_8, new Quest8(), R.raw.questao_efi_8);
+                if(countErrors >= 4){
+                    root.replaceInclude(R.layout.ei_quest_8, new Quest8(), R.raw.questao_ei_8);
                 }
             });
         }
     }
-
-
 
     @Override
     public void onResume() {

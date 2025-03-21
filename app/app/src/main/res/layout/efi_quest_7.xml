@@ -53,7 +53,7 @@
                     app:srcCompat="@drawable/iniciais_questao7_com_erros_2" />
 
                 <TextView
-                    android:id="@+id/error6"
+                    android:id="@+id/error06"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignEnd="@+id/imageView2"
@@ -65,7 +65,19 @@
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/error3"
+                    android:id="@+id/error07"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/imageView2"
+                    android:layout_alignBottom="@+id/imageView2"
+                    android:layout_marginEnd="190dp"
+                    android:layout_marginBottom="21dp"
+                    android:text="X"
+                    android:textColor="@color/design_default_color_error"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/error03"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignEnd="@+id/imageView2"
@@ -77,7 +89,7 @@
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/error4"
+                    android:id="@+id/error04"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignEnd="@+id/imageView2"
@@ -89,7 +101,7 @@
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/error5"
+                    android:id="@+id/error05"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignEnd="@+id/imageView2"
@@ -124,17 +136,6 @@
                     android:textColor="@color/design_default_color_error"
                     android:textSize="16sp" />
 
-                <TextView
-                    android:id="@+id/error2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignEnd="@+id/imageView2"
-                    android:layout_alignBottom="@+id/imageView2"
-                    android:layout_marginEnd="190dp"
-                    android:layout_marginBottom="21dp"
-                    android:text="X"
-                    android:textColor="@color/design_default_color_error"
-                    android:textSize="16sp" />
             </RelativeLayout>
         </LinearLayout>
 
